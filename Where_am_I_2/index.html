@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Where am I 2 | Arty06</title>
+<meta name="keywords" content="HDFR x kaken, Osint">
+<meta name="description" content="Writeup du challenge Guess Where am I 2 issu du CTF HDFR x Kraken">
+<meta name="author" content="">
+<link rel="canonical" href="https://artyeth06.github.io/Where_am_I_2/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://artyeth06.github.io/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://artyeth06.github.io/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://artyeth06.github.io/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><style>
+    @media screen and (min-width: 769px) {
+
+         
+        .post-content input[type="checkbox"]:checked~label>img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+<meta property="og:title" content="Where am I 2" />
+<meta property="og:description" content="Writeup du challenge Guess Where am I 2 issu du CTF HDFR x Kraken" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://artyeth06.github.io/Where_am_I_2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-23T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Where am I 2"/>
+<meta name="twitter:description" content="Writeup du challenge Guess Where am I 2 issu du CTF HDFR x Kraken"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://artyeth06.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Where am I 2",
+      "item": "https://artyeth06.github.io/Where_am_I_2/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Where am I 2",
+  "name": "Where am I 2",
+  "description": "Writeup du challenge Guess Where am I 2 issu du CTF HDFR x Kraken",
+  "keywords": [
+    "HDFR x kaken", "Osint"
+  ],
+  "articleBody": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nDescription:\nLevel:\nType: Osint\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nNous pouvons y voir,sur cette photo,une Tour Eiffel,mais pas ’la vrai’,et nous devons trouver où a été prise cette photo,rien de mieux que google image pour du reverse d'image.Et avec google image nous avons directement une reconnaissance,ils ont prit une photo de google,ainsi nous pouvons trouver la même sur le web !\nEt en fouillant un peu,cette image a été prise près de Saint-Georges-des-Gardes\n",
+  "wordCount" : "70",
+  "inLanguage": "en",
+  "datePublished": "2023-02-23T00:00:00Z",
+  "dateModified": "2023-02-23T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artyeth06.github.io/Where_am_I_2/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arty06",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artyeth06.github.io/favicons/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://artyeth06.github.io/" accesskey="h" title="Arty06 (Alt + H)">
+                <img src="https://artyeth06.github.io/avatar.png" alt="" aria-label="logo"
+                    height="30">Arty06</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://artyeth06.github.io/categories/cheat-sheet" title="Cheat sheet">
+                    <span>Cheat sheet</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/categories/writeups" title="Writeups">
+                    <span>Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Where am I 2
+    </h1>
+    <div class="post-meta"><span title='2023-02-23 00:00:00 +0000 UTC'>February 23, 2023</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p><strong>Description</strong>:</p>
+<p><strong>Level</strong>:</p>
+<p><strong>Type</strong>: Osint</p>
+<p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p>Nous pouvons y voir,sur cette photo,une <em>Tour Eiffel</em>,mais pas &rsquo;la vrai&rsquo;,et nous devons trouver où a été prise cette photo,rien de mieux que google image pour du <code>reverse d'image</code>.Et avec google image nous avons directement une reconnaissance,ils ont prit une photo de google,ainsi nous pouvons trouver la même sur le web !</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-dce4e" hidden>
+<label for="zoomCheck-dce4e">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/740b8097-c3db-4aa1-b169-54527dd62f0b.png#center" alt=""  />
+</label></p>
+<p>Et en fouillant un peu,cette image a été prise près de <code>Saint-Georges-des-Gardes</code></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://artyeth06.github.io/tags/hdfr-x-kaken/">HDFR x kaken</a></li>
+      <li><a href="https://artyeth06.github.io/tags/osint/">Osint</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 Arty06</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

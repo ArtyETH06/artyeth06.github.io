@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The Agency | Arty06</title>
+<meta name="keywords" content="Osint, Davinci CTF Présentiel">
+<meta name="description" content="Writeup du challenge The Agency issu du CTF Davinci CTF (présentiel)">
+<meta name="author" content="">
+<link rel="canonical" href="https://artyeth06.github.io/the_agency/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://artyeth06.github.io/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://artyeth06.github.io/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://artyeth06.github.io/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><style>
+    @media screen and (min-width: 769px) {
+
+         
+        .post-content input[type="checkbox"]:checked~label>img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+<meta property="og:title" content="The Agency" />
+<meta property="og:description" content="Writeup du challenge The Agency issu du CTF Davinci CTF (présentiel)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://artyeth06.github.io/the_agency/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-11T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Agency"/>
+<meta name="twitter:description" content="Writeup du challenge The Agency issu du CTF Davinci CTF (présentiel)"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://artyeth06.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The Agency",
+      "item": "https://artyeth06.github.io/the_agency/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The Agency",
+  "name": "The Agency",
+  "description": "Writeup du challenge The Agency issu du CTF Davinci CTF (présentiel)",
+  "keywords": [
+    "Osint", "Davinci CTF Présentiel"
+  ],
+  "articleBody": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nDescription: I don’t remember where I did my reservation … Give me the exact address of the nearest agency.\nType: Osint\nFlag format : dvCTF{[streetnumber]_[street_name]}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nNous pouvons essayer de reverse l’image grâce à Google Image:\nEt nous voyons qu’il y a une adresse Leboncoin semblable.\nEt en visitant la page, nous pouvons y voir une adresse (j’ai bien galéré mais c’était l’adresse sur laquelle j’étais,au bout de quelques heures les admins m’ont auguillés)![[Capture d’écran 2023-03-11 234728.png]] Ainsi la bonne adresse est l'allée des Fleurs F1 au cap Esterel\n",
+  "wordCount" : "89",
+  "inLanguage": "en",
+  "datePublished": "2023-03-11T00:00:00Z",
+  "dateModified": "2023-03-11T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artyeth06.github.io/the_agency/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arty06",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artyeth06.github.io/favicons/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://artyeth06.github.io/" accesskey="h" title="Arty06 (Alt + H)">
+                <img src="https://artyeth06.github.io/avatar.png" alt="" aria-label="logo"
+                    height="30">Arty06</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://artyeth06.github.io/categories/cheat-sheet" title="Cheat sheet">
+                    <span>Cheat sheet</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/categories/writeups" title="Writeups">
+                    <span>Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      The Agency
+    </h1>
+    <div class="post-meta"><span title='2023-03-11 00:00:00 +0000 UTC'>March 11, 2023</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p><strong>Description</strong>: I don&rsquo;t remember where I did my reservation &hellip; Give me the exact address of the nearest agency.</p>
+<p><strong>Type</strong>: Osint</p>
+<p>Flag format : <code>dvCTF{[streetnumber]_[street_name]}</code><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p>
+
+<input type="checkbox" id="zoomCheck-7285e" hidden>
+<label for="zoomCheck-7285e">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/1a33a414-c4b8-450b-817c-26874ed6dc5e.jpg#center" alt=""  />
+</label></p>
+<p>Nous pouvons essayer de reverse l&rsquo;image grâce à <code>Google Image</code>:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-5b8b9" hidden>
+<label for="zoomCheck-5b8b9">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/da0efb72-2ad9-4ea4-9173-8f6b00426535.png#center" alt=""  />
+</label></p>
+<p>Et nous voyons qu&rsquo;il y a une adresse Leboncoin semblable.</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-37ef9" hidden>
+<label for="zoomCheck-37ef9">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/2a091154-57ac-48ca-a2e3-4fef1fe2c3b1.png#center" alt=""  />
+</label></p>
+<p>Et en visitant la page, nous pouvons y voir une adresse (j&rsquo;ai bien galéré mais c&rsquo;était l&rsquo;adresse sur laquelle j&rsquo;étais,au bout de quelques heures les admins m&rsquo;ont auguillés)![[Capture d’écran 2023-03-11 234728.png]]
+Ainsi la bonne adresse est <code>l'allée des Fleurs F1 au cap Esterel</code></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://artyeth06.github.io/tags/osint/">Osint</a></li>
+      <li><a href="https://artyeth06.github.io/tags/davinci-ctf-pr%C3%A9sentiel/">Davinci CTF Présentiel</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 Arty06</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

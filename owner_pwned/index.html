@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Owner Pwned | Arty06</title>
+<meta name="keywords" content="Davinci CTF Présentiel, blockchain">
+<meta name="description" content="Writeup du challenge Owner Pwned issu du CTF Davinci CTF (présentiel)">
+<meta name="author" content="">
+<link rel="canonical" href="https://artyeth06.github.io/owner_pwned/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://artyeth06.github.io/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://artyeth06.github.io/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://artyeth06.github.io/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><style>
+    @media screen and (min-width: 769px) {
+
+         
+        .post-content input[type="checkbox"]:checked~label>img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+<meta property="og:title" content="Owner Pwned" />
+<meta property="og:description" content="Writeup du challenge Owner Pwned issu du CTF Davinci CTF (présentiel)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://artyeth06.github.io/owner_pwned/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-11T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Owner Pwned"/>
+<meta name="twitter:description" content="Writeup du challenge Owner Pwned issu du CTF Davinci CTF (présentiel)"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://artyeth06.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Owner Pwned",
+      "item": "https://artyeth06.github.io/owner_pwned/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Owner Pwned",
+  "name": "Owner Pwned",
+  "description": "Writeup du challenge Owner Pwned issu du CTF Davinci CTF (présentiel)",
+  "keywords": [
+    "Davinci CTF Présentiel", "blockchain"
+  ],
+  "articleBody": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nDescription: “No one can own my wallet !!!!” He said. Or can someone ? Try to steal his money.\nConnection info: http://web3.dvc.tf:5000/challenge1\nType: Blockchain ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nNous devons,avant de commencer le chal,setup MM et tout… Une fois setup,nous devons deployer le contrat:\nPour pouvoir interagir avec le contrat,nous pouvons utiliser Remix-IDE, avec l’adresse du contrat,et le code:\nPuis nous devons,importer le contraten appuyant sur At Adress (au préalable compiler le .sol):\nEn analysant le programme,la SEUL personne pouvant transférer le ownership,doit être la personne,ayant pour adresse,celle stockée dans la variable me,qui,est déclarée ici:\nfunction initWallet() public { me = msg.sender; } msg.sender =\u003e Personne qui exécute l’action/fonction ,ainsi en déployant le contrat,notre adresse est celle de me Nous devons donc exécuter la fonction initWallet,puis\nNous pouvons ainsi exécuter la fonction migrateTo,qui prends en paramètre l’adresse à qui est transférée la TOTALITE de l’argent stockée dans le contrat:\nfunction migrateTo(address to) public { require(msg.sender == me, \"Only me can withdraw all the funds\"); payable(to).transfer(address(this).balance); } Nous avons juste à exécuter cette fonction en mettant en paramètre une autre adresse,comme: 0xC1245227D6581DaB6f7bD5310B0fBec2e179b9eF:\nEt,en retournant sur le site,nous devons vérifier le contrat,et le flag apparait !\n",
+  "wordCount" : "192",
+  "inLanguage": "en",
+  "datePublished": "2023-03-11T00:00:00Z",
+  "dateModified": "2023-03-11T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artyeth06.github.io/owner_pwned/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arty06",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artyeth06.github.io/favicons/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://artyeth06.github.io/" accesskey="h" title="Arty06 (Alt + H)">
+                <img src="https://artyeth06.github.io/avatar.png" alt="" aria-label="logo"
+                    height="30">Arty06</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://artyeth06.github.io/categories/cheat-sheet" title="Cheat sheet">
+                    <span>Cheat sheet</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/categories/writeups" title="Writeups">
+                    <span>Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Owner Pwned
+    </h1>
+    <div class="post-meta"><span title='2023-03-11 00:00:00 +0000 UTC'>March 11, 2023</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p><strong>Description</strong>: &ldquo;No one can own my wallet !!!!&rdquo; He said. Or can someone ? Try to steal his money.</p>
+<p>Connection info: <code>http://web3.dvc.tf:5000/challenge1</code></p>
+<p><strong>Type</strong>: Blockchain
+<strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p>Nous devons,avant de commencer le chal,setup MM et tout&hellip;
+Une fois setup,nous devons <code>deployer</code> le contrat:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-51a3b" hidden>
+<label for="zoomCheck-51a3b">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/b5e6d244-8de0-4a34-9d4c-8ccbcc1cc79e.png#center" alt=""  />
+</label></p>
+<p>Pour pouvoir <code>interagir</code> avec le contrat,nous pouvons utiliser <em>Remix-IDE</em>, avec l&rsquo;adresse du contrat,et le code:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-1c83a" hidden>
+<label for="zoomCheck-1c83a">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/54049716-1f82-4d4f-a83e-6baf44cc79d4.png#center" alt=""  />
+</label></p>
+<p>Puis nous devons,<em>importer</em> le contraten appuyant sur <code>At Adress</code> (au préalable <em>compiler</em> le <code>.sol</code>):</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-16e87" hidden>
+<label for="zoomCheck-16e87">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/3b36698a-cdbc-41be-a30f-42258b46afb8.png#center" alt=""  />
+</label></p>
+<p>En analysant le programme,la SEUL personne pouvant <em>transférer</em> le <code>ownership</code>,doit être la personne,ayant pour adresse,celle stockée dans la variable <strong>me</strong>,qui,est déclarée ici:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">function initWallet() public {
+</span></span><span class="line"><span class="cl">	me = msg.sender;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p><code>msg.sender</code> =&gt; Personne qui exécute l&rsquo;action/fonction
+,ainsi en déployant le contrat,notre adresse est celle de <code>me</code>
+Nous devons donc exécuter la fonction <code>initWallet</code>,puis</p>
+<p>Nous pouvons ainsi exécuter la fonction <code>migrateTo</code>,qui prends en paramètre l&rsquo;adresse à qui est transférée la TOTALITE de l&rsquo;argent stockée dans le contrat:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">function migrateTo(address to) public {
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	require(msg.sender == me, &#34;Only me can withdraw all the funds&#34;);
+</span></span><span class="line"><span class="cl">	payable(to).transfer(address(this).balance);
+</span></span><span class="line"><span class="cl">	}
+</span></span></code></pre></div><p>Nous avons juste à exécuter cette fonction en mettant en paramètre une autre adresse,comme: <code>0xC1245227D6581DaB6f7bD5310B0fBec2e179b9eF</code>:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-95deb" hidden>
+<label for="zoomCheck-95deb">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/7b3fe476-5e49-45e6-8ff6-1c7e8e1b862c.png#center" alt=""  />
+</label></p>
+<p>Et,en retournant sur le site,nous devons <code>vérifier</code> le contrat,et le flag apparait !</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-9e408" hidden>
+<label for="zoomCheck-9e408">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/2fd4f3ae-53be-4c65-80a0-9d5a03e3e2d8.png#center" alt=""  />
+</label></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://artyeth06.github.io/tags/davinci-ctf-pr%C3%A9sentiel/">Davinci CTF Présentiel</a></li>
+      <li><a href="https://artyeth06.github.io/tags/blockchain/">blockchain</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 Arty06</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

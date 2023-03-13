@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Good authentication | Arty06</title>
+<meta name="keywords" content="SecurityValley-always on CTF, Coding">
+<meta name="description" content="Writeup du challenge Good authentication">
+<meta name="author" content="">
+<link rel="canonical" href="https://artyeth06.github.io/Good_authentication/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://artyeth06.github.io/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://artyeth06.github.io/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://artyeth06.github.io/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><style>
+    @media screen and (min-width: 769px) {
+
+         
+        .post-content input[type="checkbox"]:checked~label>img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+<meta property="og:title" content="Good authentication" />
+<meta property="og:description" content="Writeup du challenge Good authentication" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://artyeth06.github.io/Good_authentication/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-10-23T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Good authentication"/>
+<meta name="twitter:description" content="Writeup du challenge Good authentication"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://artyeth06.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Good authentication",
+      "item": "https://artyeth06.github.io/Good_authentication/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Good authentication",
+  "name": "Good authentication",
+  "description": "Writeup du challenge Good authentication",
+  "keywords": [
+    "SecurityValley-always on CTF", "Coding"
+  ],
+  "articleBody": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nDescription: After your first strike, the development team has increased the power of there login function. Are you strong enough to break it again?\nLevel: Level 1\nType: Coding ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nSo we got an authentification js code,a bit harder thant the 1st one:\nconst readline = require('readline').createInterface({ input: process.stdin, output: process.stdout }); readline.question('Please enter password \\\\n', password =\u003e { console.log(`Gonna check if ${password} is correct`); readline.close(); validate(password) }); function validate(password) { if (password.length != 12) { throw new Error(\"pass violation. wrong password length\"); } const block1 = Array.from(password).slice(0, 4) const block2 = Array.from(password).slice(4, 8) const block3 = Array.from(password).slice(8, 12) const block = [ block1, block2, block3 ] let crafted = \"\"; for (let i = 0; i \u003c block.length; i++) { for (let a = 0; a \u003c block[i].length; a++) { if (i == 0) { crafted += String.fromCharCode(String(block[i][a]).charCodeAt(0) ^ 7) } else if (i == 1) { crafted += String.fromCharCode(String(block[i][a]).charCodeAt(0) ^ 11) } else { crafted += String.fromCharCode(String(block[i][a]).charCodeAt(0) ^ 9) } } } if(crafted !== \"sontTbxTjffe\") { throw new Error(\"pass violation. wrong credentials\"); } banner(password); } function banner(payload) { console.info(\"that was great !!!\"); console.info(\"run the following command to get the flag.\") console.info(`curl -X POST \u003chttp://ctf.securityvalley.org:7777/api/v1/validate\u003e -H 'Content-Type: application/json' -d '{\"pass\": \"${payload}\"}'`) } At the end,we can see that the “final pass” need to be sontTbxTjffe.The pass is in 3 part:\nsont ^ 7 TbxT ^ 11 jffe ^ 9 This is Xor (algo) so lets decode with cyberchef:\nsont = this TbxT = _is_ jffe = cool So the password is this_is_cool,so we need to replace the ${payload} with this_is_cool, so we enter: curl -X POST -H 'Content-Type: application/json' -d '{\"pass\": \"this_is_cool\"}'\nThe flag appear ! The flag is: SecVal{9R34t_y0u_X0R3d}\n",
+  "wordCount" : "283",
+  "inLanguage": "en",
+  "datePublished": "2022-10-23T00:00:00Z",
+  "dateModified": "2022-10-23T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artyeth06.github.io/Good_authentication/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arty06",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artyeth06.github.io/favicons/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://artyeth06.github.io/" accesskey="h" title="Arty06 (Alt + H)">
+                <img src="https://artyeth06.github.io/avatar.png" alt="" aria-label="logo"
+                    height="30">Arty06</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://artyeth06.github.io/categories/cheat-sheet" title="Cheat sheet">
+                    <span>Cheat sheet</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/categories/writeups" title="Writeups">
+                    <span>Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Good authentication
+    </h1>
+    <div class="post-meta"><span title='2022-10-23 00:00:00 +0000 UTC'>October 23, 2022</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p><strong>Description</strong>: After your first strike, the development team has increased the power of there login function. Are you strong enough to break it again?</p>
+<p><strong>Level</strong>: Level 1</p>
+<p><strong>Type</strong>: Coding
+<strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p>So we got an authentification js code,a bit harder thant the 1st one:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">const</span> <span class="n">readline</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;readline&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">createInterface</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">input</span><span class="p">:</span> <span class="n">process</span><span class="o">.</span><span class="n">stdin</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">output</span><span class="p">:</span> <span class="n">process</span><span class="o">.</span><span class="n">stdout</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">readline</span><span class="o">.</span><span class="n">question</span><span class="p">(</span><span class="s1">&#39;Please enter password </span><span class="se">\\</span><span class="s1">n&#39;</span><span class="p">,</span> <span class="n">password</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="err">`</span><span class="n">Gonna</span> <span class="n">check</span> <span class="k">if</span> <span class="err">$</span><span class="p">{</span><span class="n">password</span><span class="p">}</span> <span class="ow">is</span> <span class="n">correct</span><span class="err">`</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">readline</span><span class="o">.</span><span class="n">close</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">validate</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">function</span> <span class="n">validate</span><span class="p">(</span><span class="n">password</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">password</span><span class="o">.</span><span class="n">length</span> <span class="o">!=</span> <span class="mi">12</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">throw</span> <span class="n">new</span> <span class="n">Error</span><span class="p">(</span><span class="s2">&#34;pass violation. wrong password length&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">const</span> <span class="n">block1</span> <span class="o">=</span> <span class="n">Array</span><span class="o">.</span><span class="n">from</span><span class="p">(</span><span class="n">password</span><span class="p">)</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">const</span> <span class="n">block2</span> <span class="o">=</span> <span class="n">Array</span><span class="o">.</span><span class="n">from</span><span class="p">(</span><span class="n">password</span><span class="p">)</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">const</span> <span class="n">block3</span> <span class="o">=</span> <span class="n">Array</span><span class="o">.</span><span class="n">from</span><span class="p">(</span><span class="n">password</span><span class="p">)</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">const</span> <span class="n">block</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">block1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">block2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">block3</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">crafted</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">block</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">a</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">crafted</span> <span class="o">+=</span> <span class="n">String</span><span class="o">.</span><span class="n">fromCharCode</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">a</span><span class="p">])</span><span class="o">.</span><span class="n">charCodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">^</span> <span class="mi">7</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">crafted</span> <span class="o">+=</span> <span class="n">String</span><span class="o">.</span><span class="n">fromCharCode</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">a</span><span class="p">])</span><span class="o">.</span><span class="n">charCodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">^</span> <span class="mi">11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">crafted</span> <span class="o">+=</span> <span class="n">String</span><span class="o">.</span><span class="n">fromCharCode</span><span class="p">(</span><span class="n">String</span><span class="p">(</span><span class="n">block</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">a</span><span class="p">])</span><span class="o">.</span><span class="n">charCodeAt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">^</span> <span class="mi">9</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">crafted</span> <span class="o">!==</span> <span class="s2">&#34;sontTbxTjffe&#34;</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">throw</span> <span class="n">new</span> <span class="n">Error</span><span class="p">(</span><span class="s2">&#34;pass violation. wrong credentials&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">banner</span><span class="p">(</span><span class="n">password</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">function</span> <span class="n">banner</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">console</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;that was great !!!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">console</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&#34;run the following command to get the flag.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">console</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="err">`</span><span class="n">curl</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">&lt;</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ctf</span><span class="o">.</span><span class="n">securityvalley</span><span class="o">.</span><span class="n">org</span><span class="p">:</span><span class="mi">7777</span><span class="o">/</span><span class="n">api</span><span class="o">/</span><span class="n">v1</span><span class="o">/</span><span class="n">validate</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="o">-</span><span class="n">d</span> <span class="s1">&#39;{&#34;pass&#34;: &#34;$</span><span class="si">{payload}</span><span class="s1">&#34;}&#39;</span><span class="err">`</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>At the end,we can see that the &ldquo;final pass&rdquo; need to be <code>sontTbxTjffe</code>.The pass is in 3 part:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">sont ^ 7
+</span></span><span class="line"><span class="cl">TbxT ^ 11
+</span></span><span class="line"><span class="cl">jffe ^ 9
+</span></span></code></pre></div><p>This is <strong>Xor</strong> (algo) so lets decode with cyberchef:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-b49a0" hidden>
+<label for="zoomCheck-b49a0">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/1f16ecf4-d338-48d1-8dae-02b288127d14.png#center" alt=""  />
+</label></p>
+<p>
+
+<input type="checkbox" id="zoomCheck-a9420" hidden>
+<label for="zoomCheck-a9420">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/4cb5e166-18af-4f6a-8202-a5bf6ab19416.png#center" alt=""  />
+</label></p>
+<p>
+
+<input type="checkbox" id="zoomCheck-8168d" hidden>
+<label for="zoomCheck-8168d">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/193b4130-1ad6-4d32-9ee9-e2f86b9c26e1.png#center" alt=""  />
+</label></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">sont = this
+</span></span><span class="line"><span class="cl">TbxT = _is_
+</span></span><span class="line"><span class="cl">jffe = cool
+</span></span></code></pre></div><p>So the password is <code>this_is_cool</code>,so we need to replace the <code>${payload}</code> with <code>this_is_cool</code>, so we enter: <code>curl -X POST &lt;http://ctf.securityvalley.org:7777/api/v1/validate&gt; -H 'Content-Type: application/json' -d '{&quot;pass&quot;: &quot;this_is_cool&quot;}'</code></p>
+<p>
+
+<input type="checkbox" id="zoomCheck-bb682" hidden>
+<label for="zoomCheck-bb682">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/5b26674e-ed3c-4e75-976d-70084924253f.png#center" alt=""  />
+</label></p>
+<p>The flag appear !
+The flag is: <strong>SecVal{9R34t_y0u_X0R3d}</strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://artyeth06.github.io/tags/securityvalley-always-on-ctf/">SecurityValley-always on CTF</a></li>
+      <li><a href="https://artyeth06.github.io/tags/coding/">Coding</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 Arty06</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

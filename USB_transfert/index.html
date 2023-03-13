@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>USB-transfert | Arty06</title>
+<meta name="keywords" content="HDFR x kaken, Forensic">
+<meta name="description" content="Writeup du challenge Guess USB-Transfert issu du CTF HDFR x Kraken">
+<meta name="author" content="">
+<link rel="canonical" href="https://artyeth06.github.io/USB_transfert/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://artyeth06.github.io/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://artyeth06.github.io/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://artyeth06.github.io/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><style>
+    @media screen and (min-width: 769px) {
+
+         
+        .post-content input[type="checkbox"]:checked~label>img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+<meta property="og:title" content="USB-transfert" />
+<meta property="og:description" content="Writeup du challenge Guess USB-Transfert issu du CTF HDFR x Kraken" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://artyeth06.github.io/USB_transfert/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-23T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="USB-transfert"/>
+<meta name="twitter:description" content="Writeup du challenge Guess USB-Transfert issu du CTF HDFR x Kraken"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://artyeth06.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "USB-transfert",
+      "item": "https://artyeth06.github.io/USB_transfert/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "USB-transfert",
+  "name": "USB-transfert",
+  "description": "Writeup du challenge Guess USB-Transfert issu du CTF HDFR x Kraken",
+  "keywords": [
+    "HDFR x kaken", "Forensic"
+  ],
+  "articleBody": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nDescription: En gros il y a eu un transfert d’un jpg entre ordi et clé USB mais clé USB tombé dans café donc on doit retrouver l’image x)\nLevel:\nType: Forensic\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nA ce challenge est associé un .pcap,nous l’ouvrons avec wireshark,et pouvons voir les échanges entre l’ordi et la clé USB,en cherchant,j’ai trouvé un paquet de length 65 563, ce qui est énorme (+ gros paquet du .pcap),donc on peut supposer que l’image est transférée ici.\nNous pouvons essayer de copier le dump hexadécimal, il fait 4000 lignez donc je ne le met pas mais pour récapituler il y a beaucoup de nombres et de lettre (c’est de l’hexa logique x)). Nous pouvons essayer de rétablir l’image avec https://gchq.github.io/CyberChef/#recipe=From_Hexdump() pour reconstituer le dump hexa:\nNous pouvons essayer de sauvegarder l’image sous un .jpg:\nEt nous obtenons le flag !\n",
+  "wordCount" : "141",
+  "inLanguage": "en",
+  "datePublished": "2023-02-23T00:00:00Z",
+  "dateModified": "2023-02-23T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artyeth06.github.io/USB_transfert/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arty06",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artyeth06.github.io/favicons/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://artyeth06.github.io/" accesskey="h" title="Arty06 (Alt + H)">
+                <img src="https://artyeth06.github.io/avatar.png" alt="" aria-label="logo"
+                    height="30">Arty06</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://artyeth06.github.io/categories/cheat-sheet" title="Cheat sheet">
+                    <span>Cheat sheet</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/categories/writeups" title="Writeups">
+                    <span>Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      USB-transfert
+    </h1>
+    <div class="post-meta"><span title='2023-02-23 00:00:00 +0000 UTC'>February 23, 2023</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p><strong>Description</strong>: En gros il y a eu un transfert d&rsquo;un jpg entre ordi et clé USB mais clé USB tombé dans café donc on doit retrouver l&rsquo;image x)</p>
+<p><strong>Level</strong>:</p>
+<p><strong>Type</strong>: Forensic</p>
+<p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p>A ce challenge est associé un <code>.pcap</code>,nous l&rsquo;ouvrons avec wireshark,et pouvons voir les échanges entre l&rsquo;ordi et la clé USB,en cherchant,j&rsquo;ai trouvé un paquet de <em>length</em> <code>65 563</code>, ce qui est énorme (+ gros paquet du <code>.pcap</code>),donc on peut supposer que l&rsquo;image est transférée ici.</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-c321d" hidden>
+<label for="zoomCheck-c321d">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/af131a66-ad78-4b1c-b79b-ae8611c4c19b.png#center" alt=""  />
+</label></p>
+<p>Nous pouvons essayer de copier le <code>dump hexadécimal</code>, il fait 4000 lignez donc je ne le met pas mais pour récapituler il y a beaucoup de nombres et de lettre (c&rsquo;est de l&rsquo;hexa logique x)).
+Nous pouvons essayer de rétablir l&rsquo;image avec <a href="https://gchq.github.io/CyberChef/#recipe=From_Hexdump()">https://gchq.github.io/CyberChef/#recipe=From_Hexdump()</a> pour reconstituer le dump hexa:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-13bde" hidden>
+<label for="zoomCheck-13bde">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/a4fc3b35-bc75-4230-84ec-5c3b71acc523.png#center" alt=""  />
+</label></p>
+<p>Nous pouvons essayer de sauvegarder l&rsquo;image sous un <code>.jpg</code>:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-9246f" hidden>
+<label for="zoomCheck-9246f">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/7cf0b129-c1b6-4ffb-af65-177720701f07.png#center" alt=""  />
+</label></p>
+<p>Et nous obtenons le flag !</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-9bffa" hidden>
+<label for="zoomCheck-9bffa">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/46a3883d-f03c-4011-aeab-eedadf74358c.jpg#center" alt=""  />
+</label></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://artyeth06.github.io/tags/hdfr-x-kaken/">HDFR x kaken</a></li>
+      <li><a href="https://artyeth06.github.io/tags/forensic/">Forensic</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 Arty06</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

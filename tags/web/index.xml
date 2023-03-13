@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web on Arty06</title>
+    <link>https://artyeth06.github.io/tags/web/</link>
+    <description>Recent content in Web on Arty06</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 28 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://artyeth06.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Easy1</title>
+      <link>https://artyeth06.github.io/easy1/</link>
+      <pubDate>Wed, 28 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/easy1/</guid>
+      <description>Writeup du challenge Easy1 issu du CTF Ping CTF 2022</description>
+    </item>
+    
+    <item>
+      <title>4dm1n_c0ntR0L</title>
+      <link>https://artyeth06.github.io/4dm1n_c0ntR0L/</link>
+      <pubDate>Sat, 24 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/4dm1n_c0ntR0L/</guid>
+      <description>Writeup du challenge 4dm1n_c0ntR0L issu du CTF niteCTF 2022</description>
+    </item>
+    
+    <item>
+      <title>Auto travel</title>
+      <link>https://artyeth06.github.io/Auto_travel/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Auto_travel/</guid>
+      <description>Writeup du challenge Auto travel</description>
+    </item>
+    
+    <item>
+      <title>Secured front</title>
+      <link>https://artyeth06.github.io/Secured_front/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Secured_front/</guid>
+      <description>Writeup du challenge Secured front</description>
+    </item>
+    
+  </channel>
+</rss>

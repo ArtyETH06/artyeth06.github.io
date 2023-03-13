@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The data | Arty06</title>
+<meta name="keywords" content="SecurityValley-always on CTF, Network">
+<meta name="description" content="Writeup du challenge The data">
+<meta name="author" content="">
+<link rel="canonical" href="https://artyeth06.github.io/The_data/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://artyeth06.github.io/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://artyeth06.github.io/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://artyeth06.github.io/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><style>
+    @media screen and (min-width: 769px) {
+
+         
+        .post-content input[type="checkbox"]:checked~label>img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+<meta property="og:title" content="The data" />
+<meta property="og:description" content="Writeup du challenge The data" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://artyeth06.github.io/The_data/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-10-23T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The data"/>
+<meta name="twitter:description" content="Writeup du challenge The data"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://artyeth06.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The data",
+      "item": "https://artyeth06.github.io/The_data/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The data",
+  "name": "The data",
+  "description": "Writeup du challenge The data",
+  "keywords": [
+    "SecurityValley-always on CTF", "Network"
+  ],
+  "articleBody": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nDescription: There is pcapng file. Can you, again, reveal the flag ?\nLevel: Level 1\nType: Network ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nSo what we have is a .py file:\nSo, what we got is a\n.pcap file that we can open with\nWireshark\n, and this is what we have:\nWe can already see that we have a .png file,but we can’t “open it” in this menu,so lets go ahead to: file \u003e export object \u003e Http:\nAnd we can see that we have a file:\nflag.png :\nAnd when we click on it and\nporevisualisation , the flag appear:\nThe flag is: SecVal{g1mp_g1mp_g1mp} !\n",
+  "wordCount" : "103",
+  "inLanguage": "en",
+  "datePublished": "2022-10-23T00:00:00Z",
+  "dateModified": "2022-10-23T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artyeth06.github.io/The_data/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arty06",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artyeth06.github.io/favicons/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://artyeth06.github.io/" accesskey="h" title="Arty06 (Alt + H)">
+                <img src="https://artyeth06.github.io/avatar.png" alt="" aria-label="logo"
+                    height="30">Arty06</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://artyeth06.github.io/categories/cheat-sheet" title="Cheat sheet">
+                    <span>Cheat sheet</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/categories/writeups" title="Writeups">
+                    <span>Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      The data
+    </h1>
+    <div class="post-meta"><span title='2022-10-23 00:00:00 +0000 UTC'>October 23, 2022</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p><strong>Description</strong>: There is pcapng file. Can you, again, reveal the flag ?</p>
+<p><strong>Level</strong>: Level 1</p>
+<p><strong>Type</strong>: Network
+<strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p>So what we have is a <code>.py</code> file:</p>
+<p>So, what we got is a</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">.pcap
+</span></span></code></pre></div><p>file that we can open with</p>
+<p><strong>Wireshark</strong></p>
+<p>, and this is what we have:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-9760f" hidden>
+<label for="zoomCheck-9760f">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/97fd37b1-622e-40ca-b90b-687b4107df7e.png#center" alt=""  />
+</label></p>
+<p>We can already see that we have a <code>.png</code> file,but we can&rsquo;t &ldquo;open it&rdquo; in this menu,so lets go ahead to: <code>file &gt; export object &gt; Http</code>:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-cf026" hidden>
+<label for="zoomCheck-cf026">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/ea95be4b-c1ce-455c-b617-8557de5a4f35.png#center" alt=""  />
+</label></p>
+<p>And we can see that we have a file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">flag.png
+</span></span></code></pre></div><p>:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-ee43f" hidden>
+<label for="zoomCheck-ee43f">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/3d55dfa5-1cc2-4f4b-b1a3-e495daaf3273.png#center" alt=""  />
+</label></p>
+<p>And when we click on it and</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">porevisualisation
+</span></span></code></pre></div><p>, the flag appear:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-964a3" hidden>
+<label for="zoomCheck-964a3">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/cc9acd09-9771-4b12-b931-ec83722d8f46.png#center" alt=""  />
+</label></p>
+<p>The flag is: <strong>SecVal{g1mp_g1mp_g1mp}</strong> !</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://artyeth06.github.io/tags/securityvalley-always-on-ctf/">SecurityValley-always on CTF</a></li>
+      <li><a href="https://artyeth06.github.io/tags/network/">Network</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 Arty06</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

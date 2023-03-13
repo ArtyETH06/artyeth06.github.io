@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Hash auth | Arty06</title>
+<meta name="keywords" content="SecurityValley-always on CTF, Coding">
+<meta name="description" content="Writeup du challenge Hash auth">
+<meta name="author" content="">
+<link rel="canonical" href="https://artyeth06.github.io/Hash_auth/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://artyeth06.github.io/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://artyeth06.github.io/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://artyeth06.github.io/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><style>
+    @media screen and (min-width: 769px) {
+
+         
+        .post-content input[type="checkbox"]:checked~label>img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+<meta property="og:title" content="Hash auth" />
+<meta property="og:description" content="Writeup du challenge Hash auth" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://artyeth06.github.io/Hash_auth/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-10-23T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hash auth"/>
+<meta name="twitter:description" content="Writeup du challenge Hash auth"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://artyeth06.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Hash auth",
+      "item": "https://artyeth06.github.io/Hash_auth/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Hash auth",
+  "name": "Hash auth",
+  "description": "Writeup du challenge Hash auth",
+  "keywords": [
+    "SecurityValley-always on CTF", "Coding"
+  ],
+  "articleBody": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nDescription: Ok ok ok. They have learned there lesson. Instead of using confusing authentication functions there have switched to crypto functions. At least they think they have switched to crypto functions. Anyway - please help us again and hack this piece of code!\nLevel: Level 2\nType: Coding ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nSo what we have is a .py file:\nfrom hashlib import sha256 import sys def validate_password(password): # be creative. it has something to do with SecurityValley ;-) if sha256(password.encode(\"utf-8\")).hexdigest() == \"f51f333ed26c41bedd99e1e483c0a15d2caeed7dc5a9ae02159f196799a74893\": return True return False def print_banner(payload): print(\"that was great !!!\") print(\"run the following command to get the flag.\") print(\"curl -X POST -H 'Content-Type: application/json' -d '{\\\\\"pass\\\\\": \\\\\"\"+payload+\"\\\\\"}'\") if __name__ == \"__main__\": print(\"let's do more python ;-)\") password = input(\"please enter password: \") if validate_password(password): print_banner(password) sys.exit() print(\"wrong!\") We can see that their is a hash: f51f333ed26c41bedd99e1e483c0a15d2caeed7dc5a9ae02159f196799a74893, but it gives us nothing with hash cracker. They give us a hint: “be creative. it has something to do with SecurityValley ;-)\",so we can try to make a \"wordlist\" file with some varient of “SecurityValley” like this:\nsecurityValley SecurityValley securityvalley Securit1Valley secur1tyValley Securt1valley and use\nHashcat\nto crack the hash and get the password: by using this command:\nhashcat -a 0 -m 1470 f51f333ed26c41bedd99e1e483c0a15d2caeed7dc5a9ae02159f196799a74893 wordlist.txt -o --show to crack the ashes with some word of our\nwordlist.txt file,and we can see that the first one to come is\nSecur1tyValley :\nAnd then when we enter Secur1tyValley in the python script,it give us the command to run to get the flag:\nAnd when we run: `curl -X POST\nhttp://ctf.securityvalley.org:7777/api/v1/validate\n-H ‘Content-Type: application/json’ -d ‘{“pass”: “Secur1tyValley”}’ It gives us the flag !\nThe flag is: SecVal{To_51MPl3_foR_You}\n",
+  "wordCount" : "273",
+  "inLanguage": "en",
+  "datePublished": "2022-10-23T00:00:00Z",
+  "dateModified": "2022-10-23T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artyeth06.github.io/Hash_auth/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arty06",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artyeth06.github.io/favicons/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://artyeth06.github.io/" accesskey="h" title="Arty06 (Alt + H)">
+                <img src="https://artyeth06.github.io/avatar.png" alt="" aria-label="logo"
+                    height="30">Arty06</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://artyeth06.github.io/categories/cheat-sheet" title="Cheat sheet">
+                    <span>Cheat sheet</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/categories/writeups" title="Writeups">
+                    <span>Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Hash auth
+    </h1>
+    <div class="post-meta"><span title='2022-10-23 00:00:00 +0000 UTC'>October 23, 2022</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p><strong>Description</strong>: Ok ok ok. They have learned there lesson. Instead of using confusing authentication functions there have switched to crypto functions. At least they think they have switched to crypto functions. Anyway - please help us again and hack this piece of code!</p>
+<p><strong>Level</strong>: Level 2</p>
+<p><strong>Type</strong>: Coding
+<strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p>So what we have is a <code>.py</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> <span class="n">sha256</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">validate_password</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="c1"># be creative. it has something to do with SecurityValley ;-)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="n">sha256</span><span class="p">(</span><span class="n">password</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&#34;utf-8&#34;</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&#34;f51f333ed26c41bedd99e1e483c0a15d2caeed7dc5a9ae02159f196799a74893&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_banner</span><span class="p">(</span><span class="n">payload</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;that was great !!!&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;run the following command to get the flag.&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;curl -X POST &lt;http://ctf.securityvalley.org:7777/api/v1/validate&gt; -H &#39;Content-Type: application/json&#39; -d &#39;{</span><span class="se">\\</span><span class="s2">&#34;</span><span class="k">pass</span>\\<span class="s2">&#34;: </span><span class="se">\\</span><span class="s2">&#34;&#34;+payload+&#34;</span>\\<span class="s2">&#34;}&#39;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&#34;__main__&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;let&#39;s do more python ;-)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&#34;please enter password: &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="k">if</span> <span class="n">validate_password</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">print_banner</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="err"> </span> <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err"> </span> <span class="err"> </span> <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;wrong!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>We can see that their is a hash: <code>f51f333ed26c41bedd99e1e483c0a15d2caeed7dc5a9ae02159f196799a74893</code>, but it gives us nothing with <strong>hash cracker</strong>.
+They give us a hint: &ldquo;be creative. it has something to do with SecurityValley ;-)&quot;,so we can try to make a <code>&quot;wordlist&quot;</code> file with some varient of &ldquo;SecurityValley&rdquo; like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">securityValley
+</span></span><span class="line"><span class="cl">SecurityValley
+</span></span><span class="line"><span class="cl">securityvalley
+</span></span><span class="line"><span class="cl">Securit1Valley
+</span></span><span class="line"><span class="cl">secur1tyValley
+</span></span><span class="line"><span class="cl">Securt1valley
+</span></span></code></pre></div><p>and use</p>
+<p><strong>Hashcat</strong></p>
+<p>to crack the hash and get the password: by using this command:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl"> hashcat -a 0 -m 1470 f51f333ed26c41bedd99e1e483c0a15d2caeed7dc5a9ae02159f196799a74893 wordlist.txt -o --show
+</span></span></code></pre></div><p>to crack the ashes with some word of our</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">wordlist.txt
+</span></span></code></pre></div><p>file,and we can see that the first one to come is</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-plain" data-lang="plain"><span class="line"><span class="cl">Secur1tyValley
+</span></span></code></pre></div><p>:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-f3dbd" hidden>
+<label for="zoomCheck-f3dbd">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/b879e41d-3440-440f-a9cd-22868ceab818.png#center" alt=""  />
+</label></p>
+<p>And then when we enter <code>Secur1tyValley</code> in the python script,it give us the command to run to get the flag:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-7886c" hidden>
+<label for="zoomCheck-7886c">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/d1c2363d-3ea9-40e3-ae05-daf15e201daa.png#center" alt=""  />
+</label></p>
+<p>And when we run: `curl -X POST</p>
+<p><a href="http://ctf.securityvalley.org:7777/api/v1/validate">http://ctf.securityvalley.org:7777/api/v1/validate</a></p>
+<p>-H &lsquo;Content-Type: application/json&rsquo; -d &lsquo;{&ldquo;pass&rdquo;: &ldquo;Secur1tyValley&rdquo;}&rsquo;
+It gives us the flag !</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-5b6ee" hidden>
+<label for="zoomCheck-5b6ee">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/047d15ff-0e9a-4e64-81b4-8f8574a93e2b.png#center" alt=""  />
+</label></p>
+<p>The flag is: <strong>SecVal{To_51MPl3_foR_You}</strong></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://artyeth06.github.io/tags/securityvalley-always-on-ctf/">SecurityValley-always on CTF</a></li>
+      <li><a href="https://artyeth06.github.io/tags/coding/">Coding</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 Arty06</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

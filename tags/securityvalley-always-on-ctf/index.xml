@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SecurityValley-always on CTF on Arty06</title>
+    <link>https://artyeth06.github.io/tags/securityvalley-always-on-ctf/</link>
+    <description>Recent content in SecurityValley-always on CTF on Arty06</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 23 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://artyeth06.github.io/tags/securityvalley-always-on-ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capture message</title>
+      <link>https://artyeth06.github.io/Capture_message/</link>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Capture_message/</guid>
+      <description>Writeup du challenge Capture message</description>
+    </item>
+    
+    <item>
+      <title>Capture message (2)</title>
+      <link>https://artyeth06.github.io/Capture_message_(2)/</link>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Capture_message_(2)/</guid>
+      <description>Writeup du challenge Capture message (2)</description>
+    </item>
+    
+    <item>
+      <title>Easy authentication</title>
+      <link>https://artyeth06.github.io/Easy_authentication/</link>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Easy_authentication/</guid>
+      <description>Writeup du challenge Easy authentication</description>
+    </item>
+    
+    <item>
+      <title>Good authentication</title>
+      <link>https://artyeth06.github.io/Good_authentication/</link>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Good_authentication/</guid>
+      <description>Writeup du challenge Good authentication</description>
+    </item>
+    
+    <item>
+      <title>Hash auth</title>
+      <link>https://artyeth06.github.io/Hash_auth/</link>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Hash_auth/</guid>
+      <description>Writeup du challenge Hash auth</description>
+    </item>
+    
+    <item>
+      <title>The data</title>
+      <link>https://artyeth06.github.io/The_data/</link>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/The_data/</guid>
+      <description>Writeup du challenge The data</description>
+    </item>
+    
+    <item>
+      <title>The shark</title>
+      <link>https://artyeth06.github.io/The_shark/</link>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/The_shark/</guid>
+      <description>Writeup du challenge The shark</description>
+    </item>
+    
+    <item>
+      <title>The shell</title>
+      <link>https://artyeth06.github.io/The_shell/</link>
+      <pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/The_shell/</guid>
+      <description>Writeup du challenge The shell</description>
+    </item>
+    
+  </channel>
+</rss>

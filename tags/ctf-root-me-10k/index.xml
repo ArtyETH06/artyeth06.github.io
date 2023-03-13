@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CTF Root-Me 10K on Arty06</title>
+    <link>https://artyeth06.github.io/tags/ctf-root-me-10k/</link>
+    <description>Recent content in CTF Root-Me 10K on Arty06</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 22 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://artyeth06.github.io/tags/ctf-root-me-10k/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A messed up picture - Geosint 4 sur 4</title>
+      <link>https://artyeth06.github.io/A_messed_up_picture_Geosint_4_sur_4/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/A_messed_up_picture_Geosint_4_sur_4/</guid>
+      <description>Writeup du challenge A messed up picture - Geosint 4 sur 4 issu du CTF CTF Root-me 10k</description>
+    </item>
+    
+    <item>
+      <title>Auto travel</title>
+      <link>https://artyeth06.github.io/Auto_travel/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Auto_travel/</guid>
+      <description>Writeup du challenge Auto travel</description>
+    </item>
+    
+    <item>
+      <title>Deep inside</title>
+      <link>https://artyeth06.github.io/Deep_inside/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Deep_inside/</guid>
+      <description>Writeup du challenge Deep inside</description>
+    </item>
+    
+    <item>
+      <title>Secured front</title>
+      <link>https://artyeth06.github.io/Secured_front/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Secured_front/</guid>
+      <description>Writeup du challenge Secured front</description>
+    </item>
+    
+    <item>
+      <title>Somewhere in France Geosint 1 sur 4</title>
+      <link>https://artyeth06.github.io/Somewhere_in_France_Geosint_1_sur_4/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Somewhere_in_France_Geosint_1_sur_4/</guid>
+      <description>Writeup du challenge Somewhere in France Geosint 1 sur 4</description>
+    </item>
+    
+    <item>
+      <title>To crypt or not to crypt</title>
+      <link>https://artyeth06.github.io/To_crypt_or_not_to_crypt/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/To_crypt_or_not_to_crypt/</guid>
+      <description>Writeup du challenge To crypt or not to crypt</description>
+    </item>
+    
+    <item>
+      <title>Watch some movies , Geosint 2 sur 4</title>
+      <link>https://artyeth06.github.io/Watch_some_movies_Geosint_2_sur_4/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Watch_some_movies_Geosint_2_sur_4/</guid>
+      <description>Writeup du challenge To crypt or not to crypt</description>
+    </item>
+    
+  </channel>
+</rss>

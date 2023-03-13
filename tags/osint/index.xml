@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Osint on Arty06</title>
+    <link>https://artyeth06.github.io/tags/osint/</link>
+    <description>Recent content in Osint on Arty06</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://artyeth06.github.io/tags/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Secret Plane</title>
+      <link>https://artyeth06.github.io/secret_plane/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/secret_plane/</guid>
+      <description>Writeup partiel (non flag) du challenge Secret Plane issu du CTF Davinci CTF (présentiel)</description>
+    </item>
+    
+    <item>
+      <title>The Agency</title>
+      <link>https://artyeth06.github.io/the_agency/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/the_agency/</guid>
+      <description>Writeup du challenge The Agency issu du CTF Davinci CTF (présentiel)</description>
+    </item>
+    
+    <item>
+      <title>Pirates (1 sur 2)</title>
+      <link>https://artyeth06.github.io/Pirates__1_sur_2/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Pirates__1_sur_2/</guid>
+      <description>Writeup du challenge Guess Pirates (1 sur 2) issu du CTF HDFR x Kraken</description>
+    </item>
+    
+    <item>
+      <title>Where am I 1</title>
+      <link>https://artyeth06.github.io/Where_am_I_1/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Where_am_I_1/</guid>
+      <description>Writeup du challenge Guess Where am I 1 issu du CTF HDFR x Kraken</description>
+    </item>
+    
+    <item>
+      <title>Where am I 2</title>
+      <link>https://artyeth06.github.io/Where_am_I_2/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Where_am_I_2/</guid>
+      <description>Writeup du challenge Guess Where am I 2 issu du CTF HDFR x Kraken</description>
+    </item>
+    
+    <item>
+      <title>A messed up picture - Geosint 4 sur 4</title>
+      <link>https://artyeth06.github.io/A_messed_up_picture_Geosint_4_sur_4/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/A_messed_up_picture_Geosint_4_sur_4/</guid>
+      <description>Writeup du challenge A messed up picture - Geosint 4 sur 4 issu du CTF CTF Root-me 10k</description>
+    </item>
+    
+    <item>
+      <title>Somewhere in France Geosint 1 sur 4</title>
+      <link>https://artyeth06.github.io/Somewhere_in_France_Geosint_1_sur_4/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Somewhere_in_France_Geosint_1_sur_4/</guid>
+      <description>Writeup du challenge Somewhere in France Geosint 1 sur 4</description>
+    </item>
+    
+    <item>
+      <title>Watch some movies , Geosint 2 sur 4</title>
+      <link>https://artyeth06.github.io/Watch_some_movies_Geosint_2_sur_4/</link>
+      <pubDate>Sat, 22 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Watch_some_movies_Geosint_2_sur_4/</guid>
+      <description>Writeup du challenge To crypt or not to crypt</description>
+    </item>
+    
+  </channel>
+</rss>

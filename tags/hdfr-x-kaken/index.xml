@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HDFR x kaken on Arty06</title>
+    <link>https://artyeth06.github.io/tags/hdfr-x-kaken/</link>
+    <description>Recent content in HDFR x kaken on Arty06</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://artyeth06.github.io/tags/hdfr-x-kaken/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Guess My number 1</title>
+      <link>https://artyeth06.github.io/guess_my_number1/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/guess_my_number1/</guid>
+      <description>Writeup du challenge Guess My Number 1 issu du CTF HDFR x Kraken</description>
+    </item>
+    
+    <item>
+      <title>Houston do you copy</title>
+      <link>https://artyeth06.github.io/Houston_do_you_copy/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Houston_do_you_copy/</guid>
+      <description>Writeup du challenge Guess Houston do you copy issu du CTF HDFR x Kraken</description>
+    </item>
+    
+    <item>
+      <title>Pirates (1 sur 2)</title>
+      <link>https://artyeth06.github.io/Pirates__1_sur_2/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Pirates__1_sur_2/</guid>
+      <description>Writeup du challenge Guess Pirates (1 sur 2) issu du CTF HDFR x Kraken</description>
+    </item>
+    
+    <item>
+      <title>USB-transfert</title>
+      <link>https://artyeth06.github.io/USB_transfert/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/USB_transfert/</guid>
+      <description>Writeup du challenge Guess USB-Transfert issu du CTF HDFR x Kraken</description>
+    </item>
+    
+    <item>
+      <title>Where am I 1</title>
+      <link>https://artyeth06.github.io/Where_am_I_1/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Where_am_I_1/</guid>
+      <description>Writeup du challenge Guess Where am I 1 issu du CTF HDFR x Kraken</description>
+    </item>
+    
+    <item>
+      <title>Where am I 2</title>
+      <link>https://artyeth06.github.io/Where_am_I_2/</link>
+      <pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/Where_am_I_2/</guid>
+      <description>Writeup du challenge Guess Where am I 2 issu du CTF HDFR x Kraken</description>
+    </item>
+    
+  </channel>
+</rss>

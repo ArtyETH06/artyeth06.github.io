@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Davinci CTF Présentiel on Arty06</title>
+    <link>https://artyeth06.github.io/tags/davinci-ctf-pr%C3%A9sentiel/</link>
+    <description>Recent content in Davinci CTF Présentiel on Arty06</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://artyeth06.github.io/tags/davinci-ctf-pr%C3%A9sentiel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Owner Pwned</title>
+      <link>https://artyeth06.github.io/owner_pwned/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/owner_pwned/</guid>
+      <description>Writeup du challenge Owner Pwned issu du CTF Davinci CTF (présentiel)</description>
+    </item>
+    
+    <item>
+      <title>Secret Plane</title>
+      <link>https://artyeth06.github.io/secret_plane/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/secret_plane/</guid>
+      <description>Writeup partiel (non flag) du challenge Secret Plane issu du CTF Davinci CTF (présentiel)</description>
+    </item>
+    
+    <item>
+      <title>The Agency</title>
+      <link>https://artyeth06.github.io/the_agency/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://artyeth06.github.io/the_agency/</guid>
+      <description>Writeup du challenge The Agency issu du CTF Davinci CTF (présentiel)</description>
+    </item>
+    
+  </channel>
+</rss>

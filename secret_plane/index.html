@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Secret Plane | Arty06</title>
+<meta name="keywords" content="Osint, Davinci CTF Présentiel">
+<meta name="description" content="Writeup partiel (non flag) du challenge Secret Plane issu du CTF Davinci CTF (présentiel)">
+<meta name="author" content="">
+<link rel="canonical" href="https://artyeth06.github.io/secret_plane/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.bc1149f4a72aa4858d3a9f71462f75e5884ffe8073ea9d6d5761d5663d651e20.css" integrity="sha256-vBFJ9KcqpIWNOp9xRi915YhP/oBz6p1tV2HVZj1lHiA=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://artyeth06.github.io/favicons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://artyeth06.github.io/favicons/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://artyeth06.github.io/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="https://artyeth06.github.io/favicons/favicon.ico">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><style>
+    @media screen and (min-width: 769px) {
+
+         
+        .post-content input[type="checkbox"]:checked~label>img {
+            transform: scale(1.6);
+            cursor: zoom-out;
+            position: relative;
+            z-index: 999;
+        }
+
+        .post-content img.zoomCheck {
+            transition: transform 0.15s ease;
+            z-index: 999;
+            cursor: zoom-in;
+        }
+    }
+</style>
+<meta property="og:title" content="Secret Plane" />
+<meta property="og:description" content="Writeup partiel (non flag) du challenge Secret Plane issu du CTF Davinci CTF (présentiel)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://artyeth06.github.io/secret_plane/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-11T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Secret Plane"/>
+<meta name="twitter:description" content="Writeup partiel (non flag) du challenge Secret Plane issu du CTF Davinci CTF (présentiel)"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://artyeth06.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Secret Plane",
+      "item": "https://artyeth06.github.io/secret_plane/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Secret Plane",
+  "name": "Secret Plane",
+  "description": "Writeup partiel (non flag) du challenge Secret Plane issu du CTF Davinci CTF (présentiel)",
+  "keywords": [
+    "Osint", "Davinci CTF Présentiel"
+  ],
+  "articleBody": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\nDescription: My friend is spending good time in vacation but he doesn’t want to come back or telling me where he is ! The only thing I’ve got is one of his username : dtcvf2023. Can you find his flight number and the immatriculation of the plane he took ? I want to join him…. flag format : dvCTF{immat_numVol} ex : dvCTF{5Y-KZG_KQA115}\nType: Osint\nWriteup partiel\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ La seule chose que nous avons,est un pseudo, et grâce à Sherlock,nous pouvons y voir qu’il existe un utilisateur sur instagram au nom de dtcvf2023:\nEt en arrivant sur le compte,nous trouvons 2 éléments interessants: Un lien google drive vers une photoUn post instagram\nSur le post,nous pouvons y voir l’heure: 00:59 heure LOCALE, et quelque chose d’écrit: ketibaan –\u003e Arrivé,c’est du malaisien, et en “reversant” l’image avec google image,nous pouvons y trouver l’aéroport:\nC’est donc une arrivée à l’aéroport de Sinagapour: Changi. Et en allant sur le google drive,nous pouvons y voir 1 image:\nEt en faisant quelques petites recherches,la companie aérienne est Iberia Líneas Aéreas de España:\nNous avons donc: -Aéroport d’arrivée: -Companie aérienne -Heure Locale (UTC+8)\nEn regardant les métadata de l’image,nous pouvons y voir des coordonnées:\nEt en recherchant nous obtenons une position:\n![[Capture d’écran 2023-03-12 102547.png]] Etant donné,que le post date d’il y a 5 jours,et que nous sommes le 12/03/2023,cela veut dire que le trajet a eu lei le 07/03/2023,or il est à l’aéroport à environ 1h du matin le 07/03, et que le pays est en UTC+8,cela veut sire qu’il est à l’aéroport le: 06/03/2023 à 17h UTC, nous essayons alors d’analyser le trafif dans l’après midi du 6 grâce à flight radar,en remontant,et c’est la que je bloque,je ne trouve aucun avion de Iberia Líneas Aéreas de España, qui y passe par ce point… Nous sommes resté pas mal de temps dessus et n’avons pas trouvé malheuresement…\n",
+  "wordCount" : "313",
+  "inLanguage": "en",
+  "datePublished": "2023-03-11T00:00:00Z",
+  "dateModified": "2023-03-11T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://artyeth06.github.io/secret_plane/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Arty06",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://artyeth06.github.io/favicons/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class=" dark" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://artyeth06.github.io/" accesskey="h" title="Arty06 (Alt + H)">
+                <img src="https://artyeth06.github.io/avatar.png" alt="" aria-label="logo"
+                    height="30">Arty06</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://artyeth06.github.io/categories/cheat-sheet" title="Cheat sheet">
+                    <span>Cheat sheet</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/categories/writeups" title="Writeups">
+                    <span>Writeups</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://artyeth06.github.io/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Secret Plane
+    </h1>
+    <div class="post-meta"><span title='2023-03-11 00:00:00 +0000 UTC'>March 11, 2023</span>
+
+</div>
+  </header> 
+
+  <div class="post-content"><p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong></p>
+<p><strong>Description</strong>: My friend is spending good time in vacation but he doesn&rsquo;t want to come back or telling me where he is !
+The only thing I&rsquo;ve got is one of his username : dtcvf2023.
+Can you find his flight number and the immatriculation of the plane he took ? I want to join him&hellip;.
+flag format : dvCTF{immat_numVol} ex : dvCTF{5Y-KZG_KQA115}</p>
+<p><strong>Type</strong>: Osint</p>
+<p><em>Writeup partiel</em></p>
+<p><strong>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</strong>
+La seule chose que nous avons,est un pseudo, et grâce à <strong>Sherlock</strong>,nous pouvons y voir qu&rsquo;il existe un utilisateur sur instagram au nom de <code>dtcvf2023</code>:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-9996b" hidden>
+<label for="zoomCheck-9996b">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/5dbb5f05-01ff-441d-8591-0e14f70e3d68.png#center" alt=""  />
+</label></p>
+<p>Et en arrivant sur le compte,nous trouvons 2 éléments interessants:
+<code>Un lien google drive vers une photoUn post instagram</code></p>
+<p>
+
+<input type="checkbox" id="zoomCheck-65000" hidden>
+<label for="zoomCheck-65000">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/bf6c5294-822c-492c-9544-668cdfb37b1f.png#center" alt=""  />
+</label></p>
+<p>Sur le post,nous pouvons y voir l&rsquo;heure: <code>00:59 heure LOCALE</code>, et quelque chose d&rsquo;écrit:
+<code>ketibaan</code> &ndash;&gt; Arrivé,c&rsquo;est du <em>malaisien</em>, et en &ldquo;reversant&rdquo; l&rsquo;image avec google image,nous pouvons y trouver l&rsquo;aéroport:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-efa86" hidden>
+<label for="zoomCheck-efa86">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/bfe3c37d-2851-4ad3-b760-74e96af943e6.png#center" alt=""  />
+</label></p>
+<p>C&rsquo;est donc une arrivée à l&rsquo;aéroport de Sinagapour: <code>Changi</code>.
+Et en allant sur le google drive,nous pouvons y voir 1 image:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-55312" hidden>
+<label for="zoomCheck-55312">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/895c2789-23d2-4896-a238-76138fdc14cb.png#center" alt=""  />
+</label></p>
+<p>Et en faisant quelques petites recherches,la companie aérienne est <code>Iberia Líneas Aéreas de España</code>:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-ef0c0" hidden>
+<label for="zoomCheck-ef0c0">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/997f24a7-43a9-4c95-81dc-2f5a5aa2470f.png#center" alt=""  />
+</label></p>
+<p>Nous avons donc:
+-Aéroport d&rsquo;arrivée:
+-Companie aérienne
+-Heure Locale (UTC+8)</p>
+<p>En regardant les métadata de l&rsquo;image,nous pouvons y voir des coordonnées:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-a682c" hidden>
+<label for="zoomCheck-a682c">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/e9670353-5fdf-4b4a-8347-05ae626ed629.png#center" alt=""  />
+</label></p>
+<p>Et en recherchant nous obtenons une position:</p>
+<p>
+
+<input type="checkbox" id="zoomCheck-9b371" hidden>
+<label for="zoomCheck-9b371">
+    <img class="zoomCheck" loading="lazy" decoding="async" src="/images/a7e0b7b1-2554-4298-b7de-df1d5d796110.png#center" alt=""  />
+</label></p>
+<p>![[Capture d’écran 2023-03-12 102547.png]]
+Etant donné,que le post date d&rsquo;il y a 5 jours,et que nous sommes le <code>12/03/2023</code>,cela veut dire que le trajet a eu lei le <code>07/03/2023</code>,or il est à l&rsquo;aéroport à environ 1h du matin le <code>07/03</code>, et que le pays est en UTC+8,cela veut sire qu&rsquo;il est à l&rsquo;aéroport le:
+<em>06/03/2023</em> à <em>17h UTC</em>, nous essayons alors d&rsquo;analyser le trafif dans l&rsquo;après midi du 6 grâce à <code>flight radar</code>,en remontant,et c&rsquo;est la que je bloque,je ne trouve aucun avion de <code>Iberia Líneas Aéreas de España</code>, qui y passe par ce point&hellip;
+Nous sommes resté pas mal de temps dessus et n&rsquo;avons pas trouvé malheuresement&hellip;</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://artyeth06.github.io/tags/osint/">Osint</a></li>
+      <li><a href="https://artyeth06.github.io/tags/davinci-ctf-pr%C3%A9sentiel/">Davinci CTF Présentiel</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 Arty06</span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
