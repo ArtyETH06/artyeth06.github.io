@@ -17,8 +17,8 @@ A machine from which you are going to perform the attack.
 ## Connection
 
 First and foremost, we need to connect to our target/victim machine. In my case, I'm working with the `TryHackMe BufferOverflow prep` room, so to connect, we have to start Immunity Debugger and launch the vulnerable app via: `File > Open > vulnerable_app.exe`. It should look like this:
-![Image1](https://github.com/ArtyETH06/artyeth06.github.io/cheat-sheet/buffer-overflow/images/Pasted image 20230731120106.png)
 
+![1](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/171c4c3f-ad29-46ac-a9c8-4874a78408d4)
 
 
 Next, we need to start the app, either by:
@@ -26,14 +26,24 @@ Next, we need to start the app, either by:
 - Pressing the little red play button
 - Or by going to `Debug > Run`
 
-Normally, the rectangle at the bottom right should now show `Running`![[Pasted image 20230731120338.png]] In my case, the app is running on `<ip> 1337`, and to connect, I need to establish a connection using _nmap_ from my attacker machine:
-![[Pasted image 20230731120502.png]]
+Normally, the rectangle at the bottom right should now show `Running`
+
+![Pasted image 20230731120338](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/4ce88a6c-4a11-4f3c-93fd-2d67b86a9241)
+
+In my case, the app is running on `<ip> 1337`, and to connect, I need to establish a connection using _nmap_ from my attacker machine:
+
+![Pasted image 20230731120502](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/827a0874-3b03-4f41-9080-73211084d3e2)
+
 
 My connection is all set up, let's get to hacking now!!!
 
 ## Mona Config
 
-_Mona_ is a built-in plugin in Immunity Debugger which helps us find results/go faster in our exploitation. You can interact with Mona at the bottom, there is an input; Mona commands start with `!mona <command>`![[Pasted image 20230731120951.png]] To make it easier, we're going to configure a `working folder` with Mona, you can do this by entering the command:
+_Mona_ is a built-in plugin in Immunity Debugger which helps us find results/go faster in our exploitation. You can interact with Mona at the bottom, there is an input; Mona commands start with `!mona <command>`
+
+![Pasted image 20230731120951](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/41a4d164-8331-46f7-9572-66d9ab6cc463)
+
+To make it easier, we're going to configure a `working folder` with Mona, you can do this by entering the command:
 
 > `!mona config -set workingfolder c:\mona\%p`
 
@@ -67,9 +77,14 @@ while True:
   string += 100 * "A"  
   time.sleep(1)
 ```
-(Or you can download the file directly from here: [https://artyeth06.github.io/useful-files/fuzzer.py](https://artyeth06.github.io/useful-files/fuzzer.py)) Make sure to replace with your own information.
+(Or you can download the file directly from here:
 
-You can now start the script! Take a note of the range where the app crashes! ![[Pasted image 20230731122028.png]]
+[https://artyeth06.github.io/useful-files/fuzzer.py](https://artyeth06.github.io/useful-files/fuzzer.py)) Make sure to replace with your own information.
+
+You can now start the script!
+
+[Pasted image 20230731122028](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/581900c6-c7eb-4562-a9fb-50d8c940c1f3)
+! Take a note of the range where the app crashes! 
 
 In my example, the app crashed at **2000 bytes**.
 
@@ -84,7 +99,8 @@ In other words, it will help us to determine the _offset_ of the vulnerable app.
 > `/usr/share/metasploit-framework/tools/exploit/pattern_create.rb -l <APP CRASHED BYTES> + 400`
 
 It will generate a list of characters which should look like this:
-![[Pasted image 20230731122607.png]]
+
+![Pasted image 20230731122607](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/08fe0873-ea99-4e01-8f99-5fd81b8ba0fa)
 
 ## Offset
 
@@ -119,9 +135,11 @@ except:
 ```
 (Or you can directly dowload it from this link: https://artyeth06.github.io/useful-files/exploit.py)
 We can now run this script (with the vulnerable app running)
-![[Pasted image 20230731123138.png]]
 
-You will see that the app **crashes**, which is normal: ![[Pasted image 20230731123158.png]]
+![Pasted image 20230731123138](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/519a8ed6-82de-4572-bbd7-9f238d887fb7)
+
+You will see that the app **crashes**, which is normal: 
+![Pasted image 20230731123158](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/18ada4d2-5cfc-4fe5-bf24-4df03a959d7b)
 
 Now, the final step to find the _offset_ of the vulnerable app is to use this command:
 
@@ -131,13 +149,20 @@ And then, you will normally see a line that looks like this:
 
 > `EIP contains normal pattern : ... (offset XXXX)`
 
-In my case:![[Pasted image 20230731123637.png]] Now, to verify that we have the correct _offset_, we can modify the `exploit.py` script with the following changes:
+In my case:
+
+![Pasted image 20230731123637](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/7fc03414-88b1-4928-8987-ebbc3816d56f)
+
+Now, to verify that we have the correct _offset_, we can modify the `exploit.py` script with the following changes:
 
 - Set **payload** back to empty
 - Set the **offset** at your offset value (in my case `1978`)
 - Set the **rtn** to `BBBB`
 
-Restart the vulnerable app and launch your `exploit.py` script. ![[Pasted image 20230731124203.png]] The program has crashed (again...). We are looking for the `EIP register value` to be `42424242`. But why is that?
+Restart the vulnerable app and launch your `exploit.py` script.
+
+![Pasted image 20230731124203](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/0a7d6afe-9712-494f-a00d-fd640ada9ea9)
+ The program has crashed (again...). We are looking for the `EIP register value` to be `42424242`. But why is that?
 
 > In ASCII, the representation of B is 42 (So, B is the answer to everything?)
 
@@ -165,19 +190,30 @@ python
 
 `for x in range(1, 256):     print("\\x" + "{:02x}".format(x), end='')   print()`
 
-(Or you can download it from this link: [https://artyeth06.github.io/useful-files/badchar.py](https://artyeth06.github.io/useful-files/badchar.py)) Run the script to generate the list of bad chars: ![[Pasted image 20230731125006.png]] Put this list in the payload variable.
+(Or you can download it from this link:
+
+[https://artyeth06.github.io/useful-files/badchar.py](https://artyeth06.github.io/useful-files/badchar.py))
+Run the script to generate the list of bad chars:
+
+![Pasted image 20230731125006](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/616c2b69-7129-4723-842d-423190f21026)
+
+ Put this list in the payload variable.
 
 ### Exploit
 
-Re-run the `exploit.py` script, and note the `ESP register value`. ![[Pasted image 20230731125223.png]]
+Re-run the `exploit.py` script, and note the `ESP register value`. 
+
+![Pasted image 20230731125223](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/d2dbd063-b2e6-478c-b545-3712c4957c29)
 
 ### Finding Bad Characters
 
 Now, to find bad characters, we have to use the following command with Mona once again:
 
 > `!mona compare -f C:\mona\oscp\bytearray.bin -a <ESP register value>`
+> 
+![Pasted image 20230731125618](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/327bc053-fff5-4139-8c16-c1cd445c3579)
 
-![[Pasted image 20230731125618.png]] We now have the list of possible bad characters!
+We now have the list of possible bad characters!
 
 ### Removing Bad Characters
 
@@ -195,7 +231,9 @@ To remove the bad characters, you have to follow these steps:
 
 > `!mona compare -f C:\mona\oscp\bytearray.bin -a <ESP register value>`
 
-7. Repeat all these steps until you get a message that you removed all the bad chars: ![[Pasted image 20230731130226.png]]
+7. Repeat all these steps until you get a message that you removed all the bad chars:
+8. 
+![Pasted image 20230731130226](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/66e30c49-abc2-44ae-b6a9-1ca507a7204b)
 
 ## Finding the Jump Point
 
@@ -205,7 +243,8 @@ To find the _jump point_, you can use the following command:
 
 > `!mona jmp -r esp -cpb “Bad_char_list”`
 
-![[Pasted image 20230731130830.png]]
+![Pasted image 20230731130830](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/68f69f48-ee09-4090-8191-a88f06bbecd0)
+
 
 In my case `0x625011af`. We now have to convert the string to _Little Endian_ format (to be able to use it in our script)
 
