@@ -18,5 +18,5 @@
 
 ## Buffer Overflow
 
--This [Buffer Overflow](buffer_overflow/buffer-overflow) is a kind of intro to SQL and also and obviously how to attack it and some PoC payloads !
+-This [Buffer Overflow](buffer-overflow/buffer-overflow) is a kind of intro to SQL and also and obviously how to attack it and some PoC payloads !
 
