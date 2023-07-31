@@ -17,7 +17,7 @@ A machine from which you are going to perform the attack.
 ## Connection
 
 First and foremost, we need to connect to our target/victim machine. In my case, I'm working with the `TryHackMe BufferOverflow prep` room, so to connect, we have to start Immunity Debugger and launch the vulnerable app via: `File > Open > vulnerable_app.exe`. It should look like this:
-![Image1](https://github.com/ArtyETH06/artyeth06.github.io/main/cheat-sheet/buffer-overflow/images/Pasted image 20230731120106.png)
+![Image1](https://github.com/ArtyETH06/artyeth06.github.io/cheat-sheet/buffer-overflow/images/Pasted image 20230731120106.png)
 
 
 
