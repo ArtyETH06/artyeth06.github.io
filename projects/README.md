@@ -15,7 +15,7 @@ If you want details about the project and you want to download the project file,
 
 Unfortunately,after our presentation to the jury (who loved it) we didn't have time to continue our **open-source** project and we haven't found people to continue it.
 
-[Here](https://artyeth06.github.io/project/report.pdf) you'll be able to download our final report that we presented to our jury ! Hope you'll like it (ONLY IN FRENCH,cuz im a french boi ya know)
+[Here](https://artyeth06.github.io/projects/report.pdf) you'll be able to download our final report that we presented to our jury ! Hope you'll like it (ONLY IN FRENCH,cuz im a french boi ya know)
 
 ***
 
