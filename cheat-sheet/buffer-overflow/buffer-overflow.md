@@ -30,7 +30,7 @@ Normally, the rectangle at the bottom right should now show `Running`
 
 ![Pasted image 20230731120338](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/4ce88a6c-4a11-4f3c-93fd-2d67b86a9241)
 
-In my case, the app is running on `<ip> 1337`, and to connect, I need to establish a connection using _nmap_ from my attacker machine:
+In my case, the app is running on `<ip> 1337`, and to connect, I need to establish a connection using _netcat_ from my attacker machine:
 
 ![Pasted image 20230731120502](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/827a0874-3b03-4f41-9080-73211084d3e2)
 
@@ -83,8 +83,8 @@ while True:
 
 You can now start the script!
 
-[Pasted image 20230731122028](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/581900c6-c7eb-4562-a9fb-50d8c940c1f3)
-! Take a note of the range where the app crashes! 
+![Pasted image 20230731122028](https://github.com/ArtyETH06/artyeth06.github.io/assets/107058122/581900c6-c7eb-4562-a9fb-50d8c940c1f3)
+Take a note of the range where the app crashes! 
 
 In my example, the app crashed at **2000 bytes**.
 
