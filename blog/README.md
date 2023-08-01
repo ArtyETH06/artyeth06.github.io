@@ -2,8 +2,8 @@
 
 * * *
 
-## Maybe soon ?
+## Journey of a green hat 
 
-> Maybe soon ?
+Hey ! Take a look at my green hat journey,here im explining what i do,which platform am i training on and what are my objectives !
 
-Tags: Phishing, lab
+
