@@ -35,6 +35,6 @@ You will be able to find some [blogs](blog), [Writeups from CTFs](ctf), also som
 
  
 - Blog
-	- idk x)
+	- [My Green Hat Journey to become a Pentester]
 
 * * *
