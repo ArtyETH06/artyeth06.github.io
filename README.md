@@ -18,8 +18,8 @@ You will be able to find some [blogs](blog), [Writeups from CTFs](ctf), also som
 
     
 - Cheat-Sheet
-- 
- 	- [Buffer Overflow Cheat-sheet](https://artyeth06.github.io/cheat-sheet/buffer-overflow/buffer-overflow)
+ 
+ 		- [Buffer Overflow Cheat-sheet](https://artyeth06.github.io/cheat-sheet/buffer-overflow/buffer-overflow)
 	- [XSS Cheat-Sheet](https://artyeth06.github.io/cheat-sheet/XSS)
 	- [SQL Cheat-sheet](https://artyeth06.github.io.cheat-sheet/SQL)
 	- [Cookies Cheat-sheet](https://artyeth06.github.io.cheat-sheet/Cookies)
@@ -28,8 +28,8 @@ You will be able to find some [blogs](blog), [Writeups from CTFs](ctf), also som
 
 
 - Personnal Projects
+  
 	- [WishCardMaker](https://artyeth06.github.io/projects/wishcard-maker/wishcard-maker) make a personalize card (highscool project)
-
  	- [Python4Noob](https://artyeth06.github.io/projects/report.pdf) a website to easily learn python ! 
 
 
