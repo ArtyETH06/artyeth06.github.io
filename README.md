@@ -27,7 +27,9 @@ You will be able to find some [blogs](blog), [Writeups from CTFs](ctf), also som
 
 
 - Personnal Projects
-	- idk
+	- [WishCardMaker](https://artyeth06.github.io/projects/wishcard-maker/wishcard-maker) make a personalize card (highscool project)
+
+ 	- [Python4Noob](https://artyeth06.github.io/projects/report.pdf) a website to easily learn python ! 
 
 
  
