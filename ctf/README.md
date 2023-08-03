@@ -13,7 +13,7 @@
 
 
 ### CTFs:
-1. **[Root-me 10k members](#root-me-10k-members)**
+1. **[Root-me 10k members](#root-me-10k)**
 2. **[SecurityValley-always on CTF](#securityvalley-always-on-ctf)**
 3. **[CTF Ekoparty](#ctf-ekoparty)**
 4. **[AM Cyber CTF](#am-cyber-ctf)**
