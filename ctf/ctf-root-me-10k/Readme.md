@@ -1,1 +1,2 @@
-## CTF_NAME
+## CTF_
+[test.md](test.md)
