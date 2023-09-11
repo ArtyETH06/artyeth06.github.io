@@ -8,5 +8,5 @@ Hey ! Take a look at my green hat journey,here im explining what i do,which plat
 
 ## TryHackme Security Engineer Path
 
-Learn About the New TryHackMe path [here](#SE.md)
+Learn About the New TryHackMe path [here](SE.md)
 
