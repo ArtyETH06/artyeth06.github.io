@@ -5,7 +5,7 @@ Hey ! Welcome to my personnal Website 😁 !Here i will share a lot about my **E
 
 You will be able to find some [blogs](blog), [Writeups from CTFs](ctf), also some of my [personnal projects](projects) and some [cheat-sheet](cheat-sheet) !
 
-(Website on work)
+(Website currently under developpement)
 
 
 * * *
@@ -19,7 +19,6 @@ You will be able to find some [blogs](blog), [Writeups from CTFs](ctf), also som
     
 - Cheat-Sheet
  
-
   	- [Buffer Overflow Cheat-sheet](https://artyeth06.github.io/cheat-sheet/buffer-overflow/buffer-overflow)
 	- [XSS Cheat-Sheet](https://artyeth06.github.io/cheat-sheet/XSS)
 	- [SQL Cheat-sheet](https://artyeth06.github.io.cheat-sheet/SQL)
@@ -31,7 +30,7 @@ You will be able to find some [blogs](blog), [Writeups from CTFs](ctf), also som
 - Personnal Projects
   
 	- [WishCardMaker](https://artyeth06.github.io/projects/wishcard-maker/wishcard-maker) make a personalize card (highscool project)
- 	- [Python4Noob](https://artyeth06.github.io/projects/report.pdf) a website to easily learn python ! 
+ 	- [Python4Noob](https://artyeth06.github.io/projects/report.pdf) a website to easily learn python ! (Highschool project)The star lighting up >>> 
 
 
  
