@@ -10,15 +10,15 @@ Just a 1️⃣6️⃣ years-old not dreaming of being a pentester🐱‍💻...B
 
 -👨‍🎓Im currently learning C programming language,currently tryharding to be in top 1% of the most known ethical paltorm (training) !
 
--📈In finance since 5 years old, mostly in crypto📈 (pretty good trader ;),same as my quote is “Hodl and prosper”)
+-📈In finance since 5.5 years old, mostly in crypto📈 (pretty good trader ;),same as my quote is “Hodl and prosper”)
 
--🚀Im 16 years old and grinding for my dream school
+-🚀Im 17 years old and grinding for my dream school
 
 * * * 
 
--[Root-me](https://root-me.org/Arty06): **Top 3%**
+-[Root-me](https://root-me.org/Arty06): **Top 2%**
 
--[TryHackMe](https://tryhackme.com/p/Arty06): **Top 4%**
+-[TryHackMe](https://tryhackme.com/p/Arty06): **Top 2%**
 
 -[Hack The Box](https://app.hackthebox.com/profile/1052974)
 
