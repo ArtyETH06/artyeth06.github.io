@@ -4,8 +4,6 @@ Hey! Welcome to my personal Website 😁! Here I will share a lot about my **Eth
 
 You will be able to find some [blogs](/blog), [writeups from CTFs](/ctf), as well as some of my [personal projects](/projects) and some [cheat-sheets](/cheat-sheet)!
 
-(Website currently under development)
-
 ---
 
 ## CTF Writeups/Platform Writeups
