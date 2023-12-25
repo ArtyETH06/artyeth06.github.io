@@ -2,7 +2,7 @@
 
 Hey Wassup ❓Im Arthur Raillon, A.K.A **Arty06**.
 
-Just a 1️⃣6️⃣ years-old not dreaming of being a pentester🐱‍💻...But doing everything to become one🚀.
+Im a 1️⃣7️⃣ years-old interested into red-team🐱‍💻,pentesting🐱‍💻 and quantum🚀.
 
 ## Ethical hacker👨🏻‍💻, developper💻, trader📈
 
