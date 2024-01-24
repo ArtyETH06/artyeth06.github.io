@@ -3,7 +3,11 @@
 * * *
 ## SQL Cheat-Sheet
 
+### SQL "Basic usage"
 -This [SQL cheat-sheet](SQL/SQL) is a kind of intro to SQL and also and obviously how to attack it and some PoC payloads !
+
+### SQLmap usage
+-This [SQLmap cheat-sheet](SQLmap/sqlmap_cheat_sheet) is here to help you about using the **sqlmap** tool !
 
 
 ## XSS
