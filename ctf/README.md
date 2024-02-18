@@ -40,7 +40,7 @@
 
 ## [Root-me 10k members](https://artyeth06.github.io/ctf/ctf-root-me-10k/)
 - Osint
- 	- [A-messed-up-picture-Geosint-1-sur-4](https://artyeth06.github.io/ctf/ctf-root-me-10k/A-messed-up-picture-Geosint-1-sur-4/)
+ 	- [A-messed-up-picture-Geosint-1-sur-4](https://artyeth06.github.io/ctf/ctf-root-me-10k/A-messed-up-picture-Geosint-1-sur-4.md)
 	- [A-messed-up-picture-Geosint-2-sur-4](https://artyeth06.github.io/ctf/ctf-root-me-10k/A-messed-up-picture-Geosint-2-sur-4/)
 	- [A-messed-up-picture-Geosint-4-sur-4](https://artyeth06.github.io/ctf/ctf-root-me-10k/A-messed-up-picture-Geosint-4-sur-4/)
 
