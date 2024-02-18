@@ -43,6 +43,12 @@
  	- [A-messed-up-picture-Geosint-1-sur-4](https://artyeth06.github.io/ctf/ctf-root-me-10k/A-messed-up-picture-Geosint-1-sur-4/)
 	- [A-messed-up-picture-Geosint-2-sur-4](https://artyeth06.github.io/ctf/ctf-root-me-10k/A-messed-up-picture-Geosint-2-sur-4/)
 	- [A-messed-up-picture-Geosint-4-sur-4](https://artyeth06.github.io/ctf/ctf-root-me-10k/A-messed-up-picture-Geosint-4-sur-4/)
+  	- [Auto Travel](https://artyeth06.github.io/ctf/ctf-root-me-10k/Auto-travel/)
+        - [Secured Front](https://artyeth06.github.io/ctf/ctf-root-me-10k/Secured-front/)
+  	- [To crypto or not to crypt](https://artyeth06.github.io/ctf/ctf-root-me-10k/To-crypt-or-not-to-crypt/)
+
+
+
 
 
 ## [SecurityValley - always on CTF](https://artyeth06.github.io/ctf/securityvalley-always-on-ctf/)
