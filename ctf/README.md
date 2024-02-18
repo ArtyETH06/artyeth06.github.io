@@ -37,20 +37,12 @@
 
 * * *
 
-## TryHackMe
-- None for the instant...
 
-
-## HackTheBox
-- None for the instant...
-
-
-* * *
-
-
-## [Root-me 10k members](https://artyeth06.github.io/ctf/root-me-10k-members/)
-- Miscellaneous
-	- [One Mantissa Please](https://siunam321.github.io/ctf/nahamconctf2022/Miscellaneous/One-Mantissa-Please/)
+## [Root-me 10k members](https://artyeth06.github.io/ctf/root-me-10k/)
+- Osint
+ 	- [A-messed-up-picture-Geosint-1-sur-4](https://artyeth06.github.io/ctf/root-me-10k/A-messed-up-picture-Geosint-1-sur-4/)
+	- [A-messed-up-picture-Geosint-2-sur-4](https://artyeth06.github.io/ctf/root-me-10k/A-messed-up-picture-Geosint-2-sur-4/)
+	- [A-messed-up-picture-Geosint-4-sur-4](https://artyeth06.github.io/ctf/root-me-10k/A-messed-up-picture-Geosint-4-sur-4/)
 
 
 ## [SecurityValley - always on CTF](https://artyeth06.github.io/ctf/securityvalley-always-on-ctf/)
