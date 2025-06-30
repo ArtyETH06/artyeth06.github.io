@@ -172,7 +172,7 @@ Shout out to the creator for this inspitation , though... that was fun (once it 
 
 
 
-## ## Stats
+## Stats
 
 As far as we know, only **3 teams (out of 300+)** managed to flag this challenge.  
 We were **really proud** of this, even though we missed the **First Blood** by just **4 minutes**...
@@ -188,4 +188,6 @@ EternalBLue (us): 12:34 PM
 
 
 ![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630104103.png)
+
+
 Really challenging — props and congrats to the other teams who pulled it off 💪🔥
