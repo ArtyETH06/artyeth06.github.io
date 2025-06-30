@@ -81,7 +81,7 @@ There are **two copies** of the file `fire.min.js.map` located at **two differen
 We found it **super suspicious** that the same file exists in two places... until we checked their sizes.  
 Result? They differ by **exactly one byte.**  
 
-![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630095256.png?raw=true)
+![](https://raw.githubusercontent.com/ArtyETH06/artyeth06.github.io/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630095256.png)
 
 This was a **huge hint.** (Later, the challenge maker told us this difference wasn’t intentional — they were supposed to be identical.)
 
