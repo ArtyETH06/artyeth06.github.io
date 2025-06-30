@@ -1,7 +1,7 @@
 # Wargame: StegaFire
 
 StegaFire is a challenge proposed during the famous **leHack Wargame CTF**.  
-I flagged this challenge with one of my main teammates for this CTF.
+I flagged this challenge with one of my main teammates for this CTF: Juliusxd23.
 
 *(I don’t have all screenshots because they shut down the infrastructure before I could make this report, but don’t worry, I got everything in my head x))*  
 
@@ -81,7 +81,7 @@ There are **two copies** of the file `fire.min.js.map` located at **two differen
 We found it **super suspicious** that the same file exists in two places... until we checked their sizes.  
 Result? They differ by **exactly one byte.**  
 
-![[Pasted image 20250630095256.png]]
+![](Pasted image 20250630095256.png)
 
 This was a **huge hint.** (Later, the challenge maker told us this difference wasn’t intentional — they were supposed to be identical.)
 
