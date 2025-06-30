@@ -86,9 +86,6 @@ Result? They differ by **exactly one byte.**
 This was a **huge hint.** (Later, the challenge maker told us this difference wasn’t intentional — they were supposed to be identical.)
 
 
-We found that really sucpicious that we have the same files,at 2 differents places at the same time (Maybe the chall maker saw the talk about quantum phycics / computign and decided to do a challemge with quantum etranglement or smth like that x))
-
-
 ### 🔍 Diff Time
 
 We uploaded both files to [Diffchecker](https://www.diffchecker.com/) to compare them.
