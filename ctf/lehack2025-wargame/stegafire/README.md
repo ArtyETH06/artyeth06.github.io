@@ -81,7 +81,7 @@ There are **two copies** of the file `fire.min.js.map` located at **two differen
 We found it **super suspicious** that the same file exists in two places... until we checked their sizes.  
 Result? They differ by **exactly one byte.**  
 
-![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630095256.png)
+![](https://raw.githubusercontent.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630095256.png)
 
 This was a **huge hint.** (Later, the challenge maker told us this difference wasn’t intentional — they were supposed to be identical.)
 
@@ -95,12 +95,12 @@ We uploaded both files to [Diffchecker](https://www.diffchecker.com/) to compare
 
 The differences were **small but visible** — sometimes a capital letter, sometimes a number, bracket, or underscore.
 
-![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630101148.png)
+![](https://raw.githubusercontent.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630101148.png)
 
 By extracting the changing characters in order, it slowly started forming the flag:  
 → `Le`, then `LeHack`, and continuing...
 
-![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630101548.png)
+![](https://raw.githubusercontent.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630101548.png)
 And by indentifying the lettters/numbers/brackets/underscores that changes from one file to the other,we have the flag: `LeHACK{83_CaR3fUL_F1R3_8URn2}` ✅🔥
 
 This seems pretty easy once you have found that, but we went through a lot of things first...
@@ -125,7 +125,7 @@ At some point, we even considered reconstructing spectrograms by matching freque
 
 But remember,the sounds are generated in a random patern,so nothing about this could be useful
 
-![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630103946.png)
+![](https://raw.githubusercontent.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630103946.png)
 
 ### 🔥 The Fire Rabbit Hole
 
@@ -148,7 +148,7 @@ function valueToColor(value: number): [number, number, number] {
 
 → **Spoiler:** Nope. This was just for the color palette of normal mode vs chill mode. No hidden data there.
 
-![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630102322.png)
+![](https://raw.githubusercontent.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630102322.png)
 
 ### 📜 TypeScript, A.K.A whaT the fuck is this Shit
 
@@ -168,7 +168,7 @@ After solving the challenge and talking with the challenge maker, the answer was
 A massive troll designed to waste time — and it worked.  
 Shout out to the creator for this inspitation , though... that was fun (once it was over).
 
-![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630103759.png)
+![](https://raw.githubusercontent.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630103759.png)
 
 
 
@@ -187,7 +187,7 @@ EternalBLue (us): 12:34 PM
 ```
 
 
-![](https://github.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630104103.png)
+![](https://raw.githubusercontent.com/ArtyETH06/artyeth06.github.io/blob/main/ctf/lehack2025-wargame/stegafire/images/Pasted%20image%2020250630104103.png)
 
 
 Really challenging — props and congrats to the other teams who pulled it off 💪🔥
