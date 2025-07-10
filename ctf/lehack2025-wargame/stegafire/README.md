@@ -188,3 +188,4 @@ EternalBLue (us): 12:34 PM
 
 
 Really challenging — props and congrats to the other teams who pulled it off 💪🔥
+Shoutout to Juliusxd23 and Bilal, my teammates with whom I solved the challenge!
