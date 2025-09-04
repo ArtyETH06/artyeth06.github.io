@@ -6,14 +6,15 @@ Im a 1️⃣7️⃣8️⃣ years-old interested into red-team🐱‍💻,pentest
 
 ## Ethical hacker👨🏻‍💻, developper💻, trader📈
 
--💻Im a developper (HTML/CSS/Javascript/Python/solidity)
+- 💻Im a developper (HTML/CSS/Javascript/Python/solidity)
 I developped some tools for DeFi such as DAAMv2 / DLMM tools for personnal projects, I am also building internal and external tools for the P2E Star Atlas.
 I also developped a hosting tool for Star Atlas that anybody could use: [Arty Hosting Service](https://arty-hosting-service.vercel.app/)
--👨‍🎓Im currently learning C programming language,currently tryharding to be in top 1% of the most known ethical paltorm (training) !
 
--📈In finance since 5.5 years old, mostly in crypto📈 (pretty good trader ;),same as my quote is “Hodl and prosper”)
+- 👨‍🎓Im currently learning C programming language,currently tryharding to be in top 1% of the most known ethical paltorm (training) !
 
--🚀Im 17 years old and grinding for my dream school
+- 📈In finance since 6 years old, mostly in crypto 📈 (pretty good trader ;),same as my quote is “Hodl and prosper”)
+
+-🚀Im 18 years old and grinding for my dream school
 
 * * * 
 
@@ -28,7 +29,6 @@ I also developped a hosting tool for Star Atlas that anybody could use: [Arty Ho
 
 
 *“Work hard, hack harder”*
-*“La root est longue,mais la voie est libre…”*
 
 
 # Contact Me
