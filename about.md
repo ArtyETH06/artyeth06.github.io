@@ -2,19 +2,18 @@
 
 Hey Wassup ❓Im Arthur Raillon, A.K.A **Arty06**.
 
-Im a 1️⃣7️⃣8️⃣ years-old interested into red-team🐱‍💻,pentesting🐱‍💻 and quantum🚀.
+Im a 1️⃣7️⃣8️⃣ years-old interested into red-teamam 💻,pentesting and a bit about quantum physics and AI 🚀.
 
-## Ethical hacker👨🏻‍💻, developper💻, trader📈
+## Ethical hacker 💻, developper💻, trader📈
 
-- 💻Im a developper (HTML/CSS/Javascript/Python/solidity)
-I developped some tools for DeFi such as DAAMv2 / DLMM tools for personnal projects, I am also building internal and external tools for the P2E Star Atlas.
-I also developped a hosting tool for Star Atlas that anybody could use: [Arty Hosting Service](https://arty-hosting-service.vercel.app/)
+- 📈 In finance since 6 years, mostly in crypto 📈 (pretty good trader ;),same as my quote is “Hodl and prosper”)
 
-- 👨‍🎓Im currently learning C programming language,currently tryharding to be in top 1% of the most known ethical paltorm (training) !
+- 🚀 Im 18 years old and currently grinding to get my EPITA Computer's Science 2029 degree
 
-- 📈In finance since 6 years old, mostly in crypto 📈 (pretty good trader ;),same as my quote is “Hodl and prosper”)
+- Working hard on my project to become a Red-Team operator, focusing on being a pentester first, learning on platforms and passed some certs (CRTP, PWPP, PWPA, PJPT)
 
--🚀Im 18 years old and grinding for my dream school
+- Also a developper and Vibe-coder, In the crypto space I developped multiple tools for DeFi such as DAAMv2 / DLMM tools, arbitrage / tradings bots, and also internal / external tools for the P2E Star Atlas (exemple my hosting service: [Arty Hosting Service](https://arty-hosting-service.vercel.app))
+
 
 * * * 
 
@@ -33,7 +32,8 @@ I also developped a hosting tool for Star Atlas that anybody could use: [Arty Ho
 
 # Contact Me
 
-- Email: arty.crypto06@gmail.com
 - LinkedIn: [Arthur Raillon (A.K.A Arty06)](https://www.linkedin.com/in/arthur-raillon-arty-b95b21256/)
 - Discord: arty06
-- [GitHub](https://github.com/ArtyETH06)
+- [My GitHub](https://github.com/ArtyETH06)
+- Discord: Arty06
+- (And for the rest do some Ozint ^^)
