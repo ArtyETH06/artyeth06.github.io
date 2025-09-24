@@ -36,9 +36,6 @@ You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as wel
 
 ## Certifications
 
-CRTP
-PWPP
-PWPA
-PJPT
+CRTP,PWPP,PWPA,PJPT, get an overview on the certifications I own
 
 
