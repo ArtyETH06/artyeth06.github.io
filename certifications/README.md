@@ -2,7 +2,7 @@
 
 ## CRTP
 
-![test](../images/crtp.jpeg)
+![test](./images/crtp.jpeg)
 ## PWPP
 
 ## PWPA
