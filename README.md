@@ -1,8 +1,8 @@
-# Arty06 Personal Website!
+# Arty06 Personal Website
 
-Hey! Welcome to my personal Website 😁! Here I will share a lot about my **Ethical Hacker Journey**! (Well...For the moment just a green hat 😂😂😂)
+Hey! Welcome to my personal Website 😁! Here I will share a lot about my **Ethical Hacker Journey** !
 
-You will be able to find some [blogs](/blog), [writeups from CTFs](/ctf), as well as some of my [personal projects](/projects) and some [cheat-sheets](/cheat-sheet)!
+You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as well as some of my [personal projects](/projects), some [cheat-sheets](/cheat-sheet) and even a glimpse aboute certificaions I passed !
 
 ---
 
@@ -28,8 +28,17 @@ You will be able to find some [blogs](/blog), [writeups from CTFs](/ctf), as wel
 
 ---
 
-## Blog
+## Blog / Retex
 
 - My Green Hat Journey to become a Pentester
 
 ---
+
+## Certifications
+
+CRTP
+PWPP
+PWPA
+PJPT
+
+
