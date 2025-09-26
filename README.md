@@ -6,7 +6,7 @@ You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as wel
 
 ---
 
-## CTF Writeups/Platform Writeups
+## CTFs Writeups
 
 - [LeHack 2025](/ctf/lehack2025-wargame/stegafire/)
 	- StegaFire
