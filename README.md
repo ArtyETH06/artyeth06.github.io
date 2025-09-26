@@ -8,9 +8,8 @@ You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as wel
 
 ## CTF Writeups/Platform Writeups
 
-- [CrewCTF 2023](/ctf/CrewCTF-2023/)
-	- Misc
-	- Forensics
+- [LeHack 2025](/ctf/lehack2025-wargame/stegafire/)
+	- StegaFire
 
 ## Cheat-Sheet
 
@@ -30,12 +29,12 @@ You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as wel
 
 ## Blog / Retex
 
-- My Green Hat Journey to become a Pentester
+- My Green Hat Journey to become a **Red-Team Operator**
 
 ---
 
 ## Certifications
 
-CRTP,PWPP,PWPA,PJPT, get an overview on the certifications I own
+CRTP,PWPP,PWPA,PJPT, [get an overview](/certifications/) on the certifications I own
 
 
