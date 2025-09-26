@@ -7,8 +7,11 @@ I’m 18 🧑‍🎓, aspiring **Red Team Operator** ⚔️ — interested in **
 ## Ethical hacker 💻, developper💻, trader📈
 
 - 🚀 Im 18 years old and currently grinding to get my EPITA Computer's Science 2029 degree
+
 - Working hard on my project to become a Red-Team operator, focusing on being a pentester first, learning on platforms and also passed some certs (CRTP, PWPP, PWPA, PJPT)
+
 - 📈 In finance since 6 years, mostly in crypto 📈 (pretty good trader ;),same as my quote is “Hodl and prosper”)
+
 - Also a developper and Vibe-coder, In the crypto space I developped multiple tools for DeFi such as DAAMv2 / DLMM tools, arbitrage / tradings bots, and also internal / external tools for the P2E Star Atlas (exemple my hosting service: [Arty Hosting Service](https://arty-hosting-service.vercel.app))
 
 
@@ -29,5 +32,4 @@ I’m 18 🧑‍🎓, aspiring **Red Team Operator** ⚔️ — interested in **
 - LinkedIn: [Arthur Raillon (A.K.A Arty06)](https://www.linkedin.com/in/arthur-raillon-arty-b95b21256/)
 - Discord: arty06
 - [My GitHub](https://github.com/ArtyETH06)
-- Discord: Arty06
 - (And for the rest do some Ozint ^^)
