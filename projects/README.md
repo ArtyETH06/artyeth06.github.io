@@ -2,7 +2,7 @@
 
 ## Arty Hosting Service
 
-Arty Hosting Service is a service I developped by myself, allowing users fron star Atlas who uses the SLY Assistant tool to get their bot running 24/7 on the "cloud" with no interruptions, and therefore maximising profits.
+Arty Hosting Service is a service I developped by myself, allowing users fron star Atlas who uses the SLY Assistant tool to get their bot running 24/7 on the "cloud" with no interruptions, and therefore maximizing profits.
 More information [here](https://arty-hosting-service.vercel.app/)
 
 

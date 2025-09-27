@@ -46,5 +46,6 @@ Long time ago I was doing a bit of CTF, but now I dont really have time but i st
 
 
 ## [LeHack2025](https://artyeth06.github.io/ctf/lehack2025-wargame/stegafire/)
+	Steg
 	- [StegaFire](https://artyeth06.github.io/ctf/lehack2025-wargame/stegafire/)
 

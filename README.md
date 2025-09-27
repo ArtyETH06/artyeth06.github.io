@@ -2,7 +2,7 @@
 
 Hey! Welcome to my personal Website 😁! Here I will share a lot about my **Ethical Hacker Journey** !
 
-You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as well as some of my [personal projects](/projects), some [cheat-sheets](/cheat-sheet) and even a glimpse aboute certificaions I passed !
+You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as well as some of my [personal projects](/projects), some [cheat-sheets](/cheat-sheet) and even a glimpse aboute certifications I passed !
 
 ---
 
@@ -34,6 +34,6 @@ You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as wel
 
 ## Certifications
 
-CRTP,PWPP,PWPA,PJPT, [get an overview](/certifications/) on the certifications I own
+- CRTP,PWPP,PWPA,PJPT, [get an overview](/certifications/) on the certifications I successfully passed
 
 
