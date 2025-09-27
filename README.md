@@ -16,7 +16,6 @@ You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as wel
 - [Buffer Overflow Cheat-sheet](/cheat-sheet/buffer-overflow/buffer-overflow)
 - [XSS Cheat-Sheet](/cheat-sheet/XSS)
 - [SQL Cheat-sheet](/cheat-sheet/SQL)
-- [Cookies Cheat-sheet](/cheat-sheet/Cookies)
 
 ---
 

@@ -26,6 +26,7 @@ Long time ago I was doing a bit of CTF, but now I dont really have time but i st
 18. **[FCSC 2023](#fcsc-2023)**
 19. **[PwnMe Qualifications : "8 bits"](#pwnme-qualifications-:-"8-bits")**
 20. **[crew CTF 2023](#crew-ctf-2023)**
+XX. **Attack / Defense CTF**
 
 
 * * *
@@ -38,13 +39,13 @@ Long time ago I was doing a bit of CTF, but now I dont really have time but i st
 	- [A-messed-up-picture-Geosint-4-sur-4](https://artyeth06.github.io/ctf/ctf-root-me-10k/A-messed-up-picture-Geosint-4-sur-4/)
   	- [Auto Travel](https://artyeth06.github.io/ctf/ctf-root-me-10k/Auto-travel/)
         - [Secured Front](https://artyeth06.github.io/ctf/ctf-root-me-10k/Secured-front/)
-  	- [To crypto or not to crypt](https://artyeth06.github.io/ctf/ctf-root-me-10k/To-crypt-or-not-to-crypt/)
 
 
 
 
 
-## [LeHack2025](https://artyeth06.github.io/ctf/securityvalley-always-on-ctf/)
+
+## [LeHack2025](https://artyeth06.github.io/ctf/lehack2025-wargame/stegafire/)
 - Miscellaneous
-	- [StegaFire](https://siunam321.github.io/ctf/nahamconctf2022/Miscellaneous/One-Mantissa-Please/)
+	- [StegaFire](https://artyeth06.github.io/ctf/lehack2025-wargame/stegafire/)
 
