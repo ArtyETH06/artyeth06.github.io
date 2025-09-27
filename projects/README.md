@@ -19,7 +19,7 @@ I have been in the Web3 ecosystem for approximately 6 years from now, and throuh
 
 ## Duck Adventures
 
-Made a game with Unity, and C#, dont ever talk to me be about Ducks
+Made a game with Unity, and C#, dont ever talk to me be about Ducks again
 
 
 ## DeFi Lottery 
