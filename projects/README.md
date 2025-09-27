@@ -2,14 +2,32 @@
 
 ## Arty Hosting Service
 
-* * *
+Arty Hosting Service is a service I developped by myself, allowing users fron star Atlas who uses the SLY Assistant tool to get their bot running 24/7 on the "cloud" with no interruptions, and therefore maximising profits.
+More information [here](https://arty-hosting-service.vercel.app/)
 
+<br>
+* * *
+<br>
+
+## Web3 projects
+
+I have been in the Web3 ecosystem for approximately 6 years from now, and throuhgh different projects, I had acquired a lot of experience in this field, and developped multiple (private) projects that are including:
+
+- DLMM / DAAMv2 bots (Liquidity Provider)
+- Arbitrage bot (for private group)
+- Internal management tools for my guild: Eclypse in the Star Atlas P2E
+- External hosting service for Star Atlas users ([Arty Hosting Service](https://arty-hosting-service.vercel.app/))
+- Did BombCrypto (old P2E) scholarship hosting more than 20+ accounts 
+
+* * *
 
 ## Duck Adventures
 
-Made a game with Unity, and C#, dont ever talk to be about Ducks
+Made a game with Unity, and C#, dont ever talk to me be about Ducks
 
+<br>
 * * *
+<br> 
 
 ## DeFi Lottery 
 
@@ -17,7 +35,7 @@ DeFi Lottery was a projec I developped with a friend while we were in our first 
 The project was to create an alternative to the traditionnal lottery by creating one on the Web3, always a winner, secured by a smart contract I developped in `Solidity`.
 The reason why the project never came out was because we havent got enough people to participate, even though everything else was ready.
 
-You can find all the information on this very (very) old gitbook => https://decentralized-lottery.gitbook.io/copy-of-defi-lottery/
+You can find all the information on [this very (very) old gitbook](https://decentralized-lottery.gitbook.io/copy-of-defi-lottery/)
 
 * * *
 
@@ -37,5 +55,5 @@ Unfortunately,after our presentation to the jury (who loved it) we didn't have t
 
 [Here](https://artyeth06.github.io/projects/report.pdf) you'll be able to download our final report that we presented to our jury ! Hope you'll like it (ONLY IN FRENCH,cuz im a french boi ya know)
 
-***
+* * *
 
