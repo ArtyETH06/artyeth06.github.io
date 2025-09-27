@@ -1,6 +1,5 @@
 # Cheat Sheet
 
-* * *
 ## SQL Cheat-Sheet
 
 ### SQL "Basic usage"
