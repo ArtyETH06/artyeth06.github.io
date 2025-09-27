@@ -2,7 +2,7 @@
 
 ## CRTP
 
-The `CRTP` (**C**ertified **R**ed **T**eam **P**rofessional), is the latest certification I passed, annnnd well...I struggled for this one to be honest, had to re-watch the course material multiple time (In hindsightm It was because I wasnt focused enough when viewing the videos...)
+The `CRTP` (**C**ertified **R**ed **T**eam **P**rofessional), is the latest certification I passed, annnnd well...I struggled for this one to be honest, had to re-watch the course material multiple time (In hindsight, It was because I wasnt focused enough when viewing the videos...)
 
 It contains advanced Active Direcory content, learned a LOOOOT of things that allowed me to get a better understanding of AD, and the most important part, about all the possible vulnerable stuff we can find.
 
@@ -33,7 +33,8 @@ Before starting the course and taking the exam I already had some experience wit
 
 Alex is a really good instructor, and very good hands-on exam, really loved it.
 
-This is for beginners who wants to enter the bug bounty world, loved it 10/10.More infos [here](https://certifications.tcm-sec.com/pwpa/)
+This is for beginners who wants to enter the bug bounty world, loved it 10/10.
+More infos [here](https://certifications.tcm-sec.com/pwpa/)
 
 <p align="center">
   <img src="./images/pwpa.png" alt="PWPA">
