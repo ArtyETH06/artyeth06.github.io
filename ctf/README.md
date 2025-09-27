@@ -46,6 +46,5 @@ XX. **Attack / Defense CTF**
 
 
 ## [LeHack2025](https://artyeth06.github.io/ctf/lehack2025-wargame/stegafire/)
-- Miscellaneous
 	- [StegaFire](https://artyeth06.github.io/ctf/lehack2025-wargame/stegafire/)
 
