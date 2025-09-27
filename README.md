@@ -2,7 +2,7 @@
 
 Hey! Welcome to my personal Website 😁! Here I will share a lot about my **Ethical Hacker Journey** !
 
-You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as well as some of my [personal projects](/projects), some [cheat-sheets](/cheat-sheet) and even a glimpse aboute certifications I passed !
+You will to find some [blogs / retex](/blog), [writeups from CTFs](/ctf), as well as some of my [personal projects](/projects), some [cheat-sheets](/cheat-sheet) and even a glimpse about certifications I passed !
 
 ---
 
