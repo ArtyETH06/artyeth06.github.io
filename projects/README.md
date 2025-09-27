@@ -24,7 +24,7 @@ Made a game with Unity, and C#, dont ever talk to me be about Ducks
 
 ## DeFi Lottery 
 
-DeFi Lottery was a projec I developped with a friend while we were in our first year of HighSchool.
+DeFi Lottery was a project I developped with a friend while we were in our first year of Highschool.
 The project was to create an alternative to the traditionnal lottery by creating one on the Web3, always a winner, secured by a smart contract I developped in `Solidity`.
 The reason why the project never came out was because we havent got enough people to participate, even though everything else was ready.
 
