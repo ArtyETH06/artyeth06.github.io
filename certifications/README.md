@@ -2,7 +2,7 @@
 
 ## CRTP
 
-The CRTP (**C**ertified **R**ed **T**eam **P**rofessional)
+The `CRTP` (**C**ertified **R**ed **T**eam **P**rofessional)
 
 <p align="center">
   <img src="./images/crtp.jpeg" alt="CRTP">
@@ -10,7 +10,7 @@ The CRTP (**C**ertified **R**ed **T**eam **P**rofessional)
 
 ## PWPP
 
-The PWPP (**P**ractical **W**eb **P**entest **P**rofessional)
+The `PWPP` (**P**ractical **W**eb **P**entest **P**rofessional)
 
 <p align="center">
   <img src="./images/pwpp.jpeg" alt="PWPP">
@@ -18,7 +18,7 @@ The PWPP (**P**ractical **W**eb **P**entest **P**rofessional)
 
 ## PWPA
 
-The PWPA (**P**ractical **W**eb **P**entest **A**ssociate)
+The `PWPA` (**P**ractical **W**eb **P**entest **A**ssociate)
 
 <p align="center">
   <img src="./images/pwpa.png" alt="PWPA">
@@ -26,7 +26,7 @@ The PWPA (**P**ractical **W**eb **P**entest **A**ssociate)
 
 ## PJPT
 
-The PJPT (**P**ractical **J**unior **P**enetration **T**ester)
+The `PJPT` (**P**ractical **J**unior **P**enetration **T**ester)
 
 <p align="center">
   <img src="./images/pjpt.png" alt="PJPT">
